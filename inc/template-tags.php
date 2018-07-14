@@ -62,7 +62,7 @@ if ( ! function_exists( '_exiled_entry_footer' ) ) :
 			$categories_list = get_the_category_list( esc_html__( ', ', '_exiled' ) );
 			if ( $categories_list ) {
 				/* translators: 1: list of categories. */
-				printf( '<span class="cat-links">' . esc_html__( 'Posted in %1$s', '_exiled' ) . '</span>', $categories_list ); // WPCS: XSS OK.
+				printf( '<span class="cat-links d-block">' . esc_html__( '%1$s', '_exiled' ) . '</span>', $categories_list ); // WPCS: XSS OK.
 			}
 
 			/* translators: used between list items, there is a space after the comma */
@@ -74,7 +74,7 @@ if ( ! function_exists( '_exiled_entry_footer' ) ) :
 		}
 
 		if ( ! is_single() && ! post_password_required() && ( comments_open() || get_comments_number() ) ) {
-			echo '<span class="comments-link">';
+			echo '<span class="comments-link sr-only">';
 			comments_popup_link(
 				sprintf(
 					wp_kses(
