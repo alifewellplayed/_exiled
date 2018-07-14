@@ -1,13 +1,10 @@
 <?php
 /**
- * The header for our theme
- *
- * This is the template that displays all of the <head> section and everything up until <div id="content">
- *
  * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
- *
  * @package _Exiled
  */
+ $_exiled_title = get_bloginfo( 'name', 'display' );
+ $_exiled_description = get_bloginfo( 'description', 'display' );
 
 ?>
 <!doctype html>
@@ -22,37 +19,33 @@
 
 <body <?php body_class(); ?>>
 <div id="page" class="site">
-	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', '_exiled' ); ?></a>
 
-	<header id="masthead" class="site-header">
-		<div class="site-branding">
-			<?php
-			the_custom_logo();
-			if ( is_front_page() && is_home() ) :
-				?>
-				<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
-				<?php
-			else :
-				?>
-				<p class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></p>
-				<?php
-			endif;
-			$_exiled_description = get_bloginfo( 'description', 'display' );
-			if ( $_exiled_description || is_customize_preview() ) :
-				?>
-				<p class="site-description"><?php echo $_exiled_description; /* WPCS: xss ok. */ ?></p>
-			<?php endif; ?>
-		</div><!-- .site-branding -->
+  <div class="site-sidebar">
+    <div class="site-sidebar-inner">
+      <nav id="site-navigation" class="site-nav text-right">
+        <?php wp_nav_menu( array(
+          'theme_location' => 'menu-1',
+          'menu_id' => 'primary-menu',
+          'menu_class' => 'list-unstyled list-menu mr-4',
+        ) ); ?>
+      </nav>
+      <div class="pulse-header d-block d-md-none">
+        <?php include get_template_directory() . '/template-parts/_partial_pulsemarker.php'; ?>
+      </div>
+    </div>
+  </div>
 
-		<nav id="site-navigation" class="main-navigation">
-			<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', '_exiled' ); ?></button>
-			<?php
-			wp_nav_menu( array(
-				'theme_location' => 'menu-1',
-				'menu_id'        => 'primary-menu',
-			) );
-			?>
-		</nav><!-- #site-navigation -->
-	</header><!-- #masthead -->
+  <header role="masthead" class="site-header">
+    <?php include get_template_directory() . '/template-parts/_partial_sticky.php'; ?>
+    <div class="site-branding site-header-inner">
+      <a href="<?php echo esc_url( home_url( '/' ) ); ?>">
+        <?php the_custom_logo(); ?>
+        <?php include get_template_directory() . '/template-parts/_partial_logo.php'; ?>
+      </a>
+      <h1 class="sr-only"><?php echo $_exiled_title; ?></h1>
+      <h6 class="sr-only site-description"><span><?php echo $_exiled_description; ?></span></h6>
+    </div><!-- .site-branding -->
+  </header><!-- #masthead -->
 
-	<div id="content" class="site-content">
+  <div id="river" class="site-content">
+  	<div id="content" class="fadeIn">

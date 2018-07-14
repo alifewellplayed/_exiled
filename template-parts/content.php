@@ -6,10 +6,12 @@
  *
  * @package _Exiled
  */
-
+ $classes = array(
+		'layout-single-column',
+	);
 ?>
 
-<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+<article id="post-<?php the_ID(); ?>" <?php post_class( $classes ); ?>>
 	<header class="entry-header">
 		<?php
 		if ( is_singular() ) :
@@ -20,11 +22,8 @@
 
 		if ( 'post' === get_post_type() ) :
 			?>
-			<div class="entry-meta">
-				<?php
-				_exiled_posted_on();
-				_exiled_posted_by();
-				?>
+			<div class="entry-meta sr-only">
+				<?php _exiled_posted_on(); _exiled_posted_by(); ?>
 			</div><!-- .entry-meta -->
 		<?php endif; ?>
 	</header><!-- .entry-header -->
@@ -36,7 +35,7 @@
 		the_content( sprintf(
 			wp_kses(
 				/* translators: %s: Name of current post. Only visible to screen readers */
-				__( 'Continue reading<span class="screen-reader-text"> "%s"</span>', '_exiled' ),
+				__( 'Continue reading<span class="sr-only"> "%s"</span>', '_exiled' ),
 				array(
 					'span' => array(
 						'class' => array(),

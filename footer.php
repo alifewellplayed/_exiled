@@ -9,26 +9,27 @@
  * @package _Exiled
  */
 
+ $_exiled_title = get_bloginfo( 'name', 'display' );
+ $_exiled_description = get_bloginfo( 'description', 'display' );
 ?>
-
 	</div><!-- #content -->
+</div><!-- #river -->
 
-	<footer id="colophon" class="site-footer">
-		<div class="site-info">
-			<a href="<?php echo esc_url( __( 'https://wordpress.org/', '_exiled' ) ); ?>">
-				<?php
-				/* translators: %s: CMS name, i.e. WordPress. */
-				printf( esc_html__( 'Proudly powered by %s', '_exiled' ), 'WordPress' );
-				?>
-			</a>
-			<span class="sep"> | </span>
-				<?php
-				/* translators: 1: Theme name, 2: Theme author. */
-				printf( esc_html__( 'Theme: %1$s by %2$s.', '_exiled' ), '_exiled', '<a href="https://tyler.codes">Tyler Rilling</a>' );
-				?>
+	<footer id="colophon" class="site-footer" role="footer">
+		<div class="site-info layout-single-column">
+      <?php get_sidebar(); ?>
+      <nav class="footer-links sr-only">
+        <?php wp_nav_menu( array(
+          'theme_location' => 'menu-2',
+          'menu_id' => 'footer-menu',
+        ) ); ?>
+      </nav>
+      <small class="d-block"><?php echo $_exiled_title; ?>, Copyright &copy; <?php echo date("Y"); ?></small>
+      <small class="d-block">By <a href="https://underlost.net/">Tyler Rilling</a></small>
 		</div><!-- .site-info -->
 	</footer><!-- #colophon -->
 </div><!-- #page -->
+<?php include get_template_directory() . '/template-parts/_partial_infoModal.php'; ?>
 
 <?php wp_footer(); ?>
 
