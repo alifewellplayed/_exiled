@@ -3478,9 +3478,9 @@ h1, h2, h3, h4, h5, h6,
 .h1, .h2, .h3, .h4, .h5, .h6 {
   margin-bottom: 0.5rem;
   font-family: "futura-pt", "effra", -apple-system, system-ui, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif;
-  font-weight: 500;
+  font-weight: 100;
   line-height: 1.2;
-  color: inherit; }
+  color: #1fd9b7; }
 
 h1, .h1 {
   font-size: 2.5rem; }
@@ -7901,7 +7901,7 @@ button.close {
   padding: 0.5rem 0.75rem;
   margin-bottom: 0;
   font-size: 1rem;
-  color: inherit;
+  color: #1fd9b7;
   background-color: #f7f7f7;
   border-bottom: 1px solid #ebebeb;
   border-top-left-radius: calc(0.3rem - 1px);
@@ -10627,7 +10627,7 @@ h1, h2, h3, h4, h5, h6 {
       margin-top: 3px;
       margin-bottom: 3px;
       border-right: 5px solid transparent; }
-      .site-sidebar .site-nav .list-menu.primary > li.active {
+      .site-sidebar .site-nav .list-menu.primary > li.active, .site-sidebar .site-nav .list-menu.primary > li.current_page_item {
         border-right-color: #dedede; }
       .site-sidebar .site-nav .list-menu.primary > li a {
         text-transform: uppercase;

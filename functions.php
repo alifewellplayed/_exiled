@@ -75,6 +75,24 @@ if ( ! function_exists( '_exiled_setup' ) ) :
 			'flex-width'  => true,
 			'flex-height' => true,
 		) );
+
+
+    /**
+    * Add post type formats
+    *
+    * @link https://codex.wordpress.org/Theme_Logo
+    */
+
+    add_theme_support( 'post-formats', array(
+      'aside',
+      'status',
+      'gallery',
+      'aside',
+      'link',
+      'video',
+      'audio',
+      'chat'
+    ));
 	}
 endif;
 add_action( 'after_setup_theme', '_exiled_setup' );
@@ -125,6 +143,8 @@ function _exiled_scripts() {
 }
 add_action( 'wp_enqueue_scripts', '_exiled_scripts' );
 
+require get_template_directory() . '/inc/post-meta.php';
+
 /**
  * Custom template tags for this theme.
  */
@@ -134,6 +154,9 @@ require get_template_directory() . '/inc/template-tags.php';
  * Functions which enhance the theme by hooking into WordPress.
  */
 require get_template_directory() . '/inc/template-functions.php';
+
+// Add additional fields for the theme.
+require get_template_directory() . '/inc/theme-settings.php';
 
 /**
  * Load Jetpack compatibility file.

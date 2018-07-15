@@ -12,6 +12,7 @@
     "bootstrap": "4.1.2",
     "components-font-awesome": "*",
     "del": ">=1.2.1",
+    "fullpage.js": "^3.0.1",
     "gulp": "~3.9.1",
     "gulp-autoprefixer": ">=4.0.0",
     "gulp-clean-css": ">=3.9.0",

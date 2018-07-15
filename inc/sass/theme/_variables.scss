@@ -15,19 +15,21 @@ $white: #fff;
 $primary: #1fd9b7;
 $secondary: #ff0099;
 
-$body-bg:          #f7f7f7;
-$body-color:       #181820;
-$link-color:       #181820 !default;
+$body-bg: #f7f7f7 !default;
+$body-color: #181820 !default;
+$link-color: #181820 !default;
 $text-shadow: #fff;
-$link-hover-color:      $primary !default;
+$link-hover-color: $primary !default;
 $link-hover-decoration: underline !default;
 $grid-gutter-width: 0;
 
 $font-family-sans-serif: "europa", "effra", -apple-system, system-ui, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif !default;
 $font-family-sans-serif-header: "futura-pt", "effra", -apple-system, system-ui, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif !default;
 
-$headings-font-family:   $font-family-sans-serif-header !default;
-$headings-font-weight:   500 !default;
+//headings
+$headings-font-family: $font-family-sans-serif-header !default;
+$headings-font-weight: 100 !default;
+$headings-color: $primary !default;
 
 // Site specific variables
 $featured-background: lighten($body-bg, 5%);

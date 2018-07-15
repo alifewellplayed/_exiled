@@ -62,6 +62,11 @@ gulp.task('imagemin', function() {
 	.pipe(gulp.dest('dist/img'))
 });
 
+gulp.task('svg', function() {
+  gulp.src('inc/svg/*.svg')
+  .pipe(gulp.dest('dist/svg'));
+});
+
 // Compile coffeescript to JS
 gulp.task('brew-coffee', function() {
     gulp.src('inc/coffee/*.coffee')
@@ -92,6 +97,9 @@ gulp.task('concat-js', function() {
       'node_modules/bootstrap/dist/js/bootstrap.bundle.min.js',
       'node_modules/owl.carousel/dist/owl.carousel.js',
       'node_modules/paroller.js/dist/jquery.paroller.js',
+      //'node_modules/pace-progress/pace.js',
+      //'node_modules/fullpage.js/dist/fullpage.min.js',
+      'inc/js/vline.jquery.js',
       'inc/js/functions.js',
     ])
     .pipe(sourcemaps.init())
@@ -129,7 +137,7 @@ gulp.task('watch', function() {
 // Default build task
 gulp.task('build', function(callback) {
     runSequence(
-        'copy-fonts',
+        'copy-fonts', 'svg',
         ['build-css', 'build-js'], callback
     );
 });

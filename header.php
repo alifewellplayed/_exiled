@@ -26,7 +26,7 @@
         <?php wp_nav_menu( array(
           'theme_location' => 'menu-1',
           'menu_id' => 'primary-menu',
-          'menu_class' => 'list-unstyled list-menu mr-4',
+          'menu_class' => 'primary list-unstyled list-menu',
         ) ); ?>
       </nav>
       <div class="pulse-header d-block d-md-none">

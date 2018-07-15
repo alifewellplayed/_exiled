@@ -6,12 +6,16 @@
  *
  * @package _Exiled
  */
-
+ $classes = array(
+		'layout-single-column',
+    'page',
+    'mb-5',
+	);
 ?>
 
-<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+<article id="post-<?php the_ID(); ?>" <?php post_class( $classes ); ?>>
 	<header class="entry-header">
-		<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
+		<?php the_title( '<h1 class="entry-title h1">', '</h1>' ); ?>
 	</header><!-- .entry-header -->
 
 	<?php _exiled_post_thumbnail(); ?>

@@ -53,7 +53,8 @@ $r-featured-background: darken($body-bg, 5%);
         margin-top: 3px;
         margin-bottom: 3px;
         border-right: 5px solid transparent;
-        &.active {
+        &.active,
+        &.current_page_item {
           border-right-color: darken($body-bg, 10%);
         }
         a {

@@ -3672,5 +3672,131 @@
         });
     };
 });
+(function($){
+  var methods = {
+    init: function(options){
+      //set up some default values
+      var defaults = {
+        'side' : 'left'
+      }
+      //for each element with vLine applied
+      return this.each(function(){
+        //override defaults with user defined options
+        var settings = $.extend({}, defaults, options);
+        //cache variable for performance
+        var $this = $(this);
+        //wrap the UL with a positioned object just in case
+        // $this.wrap('<div style="position:relative;"></div>');
+        //test to see if element exists, if not, append it
+        if(!$('.vLine').length){
+          //parent is the ul we wrapped
+          //insert the vLine element into the document
+          $this.parent().append($('<div style="position:absolute;top: -800px;" class="vLine"></div>'));
+          $('.vLine').css('right', '0');
+
+        }
+        //define the hover functions for each li
+        $this.find('li').hover(function(e){
+          $('.vLine').stop().animate({
+            top: $(this).position().top
+          },200);
+        }, function(e){
+          //we want to reset the line if this is met
+          if(['UL', 'LI'].indexOf(e.toElement.tagName) == -1){
+            $('.vLine').stop().animate({
+              top: '-800px'
+            });
+          }
+        });
+      });
+    }
+  }
+
+  //make it a function!
+  $.fn.vLine = function( method ) {
+    if (methods[method]) {
+      return methods[method].apply( this, Array.prototype.slice.call( arguments, 1 ));
+    } else if (typeof method === 'object' || !method) {
+      return methods.init.apply(this, arguments);
+    } else {
+      $.error( 'Method ' +  method + ' does not exist on jQuery.vLine' );
+    }
+  };
+})(jQuery);
+
+(function($){
+  var $classes = {
+    FsrHolder: 'fsr-holder',
+    FsrImage: 'image-full',
+  };
+
+  $(document).ready(function() {
+    var sections = $('.section');
+    var titles = [];
+    var anchors = [];
+    sections.each(function(i, item){
+      var title = $(item).data('title');
+      console.log(title);
+      var anchor = slugify(title);
+      titles.push(title);
+      anchors.push(anchor);
+    });
+    fullscreener($('.' + $classes.FsrImage));
+    $('.primary').vLine();
+  });
+
+  function slugify(text){
+    return text.toLowerCase()
+    .replace(/ /g,'-')
+    .replace(/[-]+/g, '-')
+    .replace(/[^\w-]+/g,'');
+  }
+
+  function fullscreener(_container) {
+    _container.each(function () {
+      var _this = $(this);
+      //debugger;
+      var _src = _this.attr('src');
+      var _srcset = _this.attr('srcset');
+      if (_srcset != null)
+      {
+        var screenWidth = $win.width();
+        var src_arr = _parse_srcset(_srcset);
+        for (var i in src_arr)
+        {
+          if (src_arr[i].width >= screenWidth)
+          {
+            _src = src_arr[i].url;
+            break;
+          }
+        }
+      }
+      _this.parent().addClass($classes.FsrHolder).attr('style', 'background-image: url(' + _src + ');');
+    });
+  }
+
+  /**
+  * parse_srcset - A much simplified version of https://github.com/albell/parse-srcset
+  *
+  * @param string str
+  * @returns array of objects of the form {url: $url, width: $width}, sorted in order of increasing width
+  */
+  function _parse_srcset(str) {
+    var arr = str.split(', ');
+    var srcset = new Array();
+    for (var i in arr)
+    {
+      var tokens = arr[i].split(' ');
+      var url = tokens[0];
+      var w = tokens[1].replace('w', '');
+      srcset.push({url: url, width: w});
+    }
+
+    srcset.sort(function (a, b) {
+      return parseFloat(a.w) - parseFloat(b.w);
+    });
+    return srcset;
+  }
+})(jQuery);
 
 //# sourceMappingURL=maps/site.js.map
