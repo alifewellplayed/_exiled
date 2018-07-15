@@ -36,7 +36,7 @@
   </div>
 
   <header role="masthead" class="site-header">
-    <?php include get_template_directory() . '/template-parts/_partial_sticky.php'; ?>
+    <?php include get_template_directory() . '/template-parts/_partial_promoted.php'; ?>
     <div class="site-branding site-header-inner">
       <a href="<?php echo esc_url( home_url( '/' ) ); ?>">
         <?php the_custom_logo(); ?>

@@ -18,6 +18,8 @@ get_header();
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main">
 
+    <?php include get_template_directory() . '/template-parts/_partial_sticky.php'; ?>
+
 		<?php
 		if ( have_posts() ) :
 

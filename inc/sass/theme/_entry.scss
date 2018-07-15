@@ -98,8 +98,8 @@
         content: ' ';
         display: block;
         width: 25px;
-        height: 3px;
-        background-color: lighten($body-bg, 10%);
+        height: 2px;
+        background-color: darken($body-bg, 25%);
         margin-bottom: 5px;
       }
       .list-inline {

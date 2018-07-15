@@ -10562,6 +10562,9 @@ h1, h2, h3, h4, h5, h6 {
   margin: 0 15px 45px;
   position: relative; }
 
+.screen-reader-text {
+  display: none; }
+
 #page {
   width: 100%;
   max-width: 720px;
@@ -10844,8 +10847,8 @@ h1, h2, h3, h4, h5, h6 {
     content: ' ';
     display: block;
     width: 25px;
-    height: 3px;
-    background-color: white;
+    height: 2px;
+    background-color: #b7b7b7;
     margin-bottom: 5px; }
   .entry .entry-footer .cat-links .list-inline > li:after {
     content: '/';
@@ -10911,6 +10914,17 @@ h1, h2, h3, h4, h5, h6 {
   background: url("../svg/bg_tile_x.svg") top left repeat;
   background-size: 20px;
   margin: 40px 0 80px; }
+
+.fs-1 {
+  font-size: 1rem; }
+
+.fs-2 {
+  font-size: 1.5rem;
+  font-weight: 100; }
+
+.fs-3 {
+  font-size: 2rem;
+  font-weight: 100; }
 
 .page .page-inner .entry-body p {
   font-size: 1rem;
