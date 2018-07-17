@@ -3,16 +3,16 @@
 * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
 * @package _Exiled
 */
-$args = array(
-  'numberposts' => 1,
-  'orderby' => 'post_date',
-  'order' => 'DESC',
-  'post_type' => '_exiled_promoted',
-  'post_status' => 'publish',
-  'suppress_filters' => true
-);
 
 function exiled_promoted() {
+  $args = array(
+    'numberposts' => 1,
+    'orderby' => 'post_date',
+    'order' => 'DESC',
+    'post_type' => '_exiled_promoted',
+    'post_status' => 'publish',
+    'suppress_filters' => true
+  );
   $promoted_posts = wp_get_recent_posts($args);
   foreach( $promoted_posts as $post ){
     $url_source = get_post_meta($post["ID"], 'source-url', true);

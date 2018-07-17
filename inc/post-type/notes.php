@@ -32,7 +32,7 @@ function register_notes() {
 		'filter_items_list'     => __( 'Filter notes list', '_exiled' ),
 	);
 	$rewrite = array(
-		'slug'                  => 'notes',
+		'slug'                  => 'status',
 		'with_front'            => true,
 		'pages'                 => true,
 		'feeds'                 => true,

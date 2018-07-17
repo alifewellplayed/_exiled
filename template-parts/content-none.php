@@ -10,11 +10,11 @@
 ?>
 
 <section class="no-results not-found">
-	<header class="page-header">
+	<header class="page-header layout-single-column">
 		<h1 class="page-title"><?php esc_html_e( 'Nothing Found', '_exiled' ); ?></h1>
 	</header><!-- .page-header -->
 
-	<div class="page-content">
+	<div class="page-content layout-single-column">
 		<?php
 		if ( is_home() && current_user_can( 'publish_posts' ) ) :
 

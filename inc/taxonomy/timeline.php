@@ -25,6 +25,13 @@ function timeline_taxonomy() {
 		'items_list'                 => __( 'Timeline list', '_exiled' ),
 		'items_list_navigation'      => __( 'Timeline list navigation', '_exiled' ),
 	);
+
+  $rewrite = array(
+		'slug'                       => 'timelines',
+		'with_front'                 => true,
+		'hierarchical'               => false,
+	);
+
 	$args = array(
 		'labels'                     => $labels,
 		'hierarchical'               => true,
@@ -34,6 +41,7 @@ function timeline_taxonomy() {
 		'show_in_nav_menus'          => true,
 		'show_tagcloud'              => false,
 		'show_in_rest'               => true,
+    'rewrite'                    => $rewrite,
 	);
 	register_taxonomy( '_timeline', array( '_exiled_note' ), $args );
 

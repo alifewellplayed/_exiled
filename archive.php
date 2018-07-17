@@ -15,9 +15,9 @@ get_header();
 
 		<?php if ( have_posts() ) : ?>
 
-			<header class="page-header">
+			<header class="page-header layout-single-column mb-4">
 				<?php
-				the_archive_title( '<h1 class="page-title layout-single-column mb-4">', '</h1>' );
+				the_archive_title( '<h1 class="page-title mb-2">', '</h1>' );
 				the_archive_description( '<div class="archive-description">', '</div>' );
 				?>
 			</header><!-- .page-header -->

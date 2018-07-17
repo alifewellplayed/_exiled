@@ -1,13 +1,18 @@
 <?php
-/**
-* @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
-* @package _Exiled
-*/
-function exiled_latest_sticky() {
+// Archive related shortcodes
+
+function exiled_render_posts() {
   $args = array(
-    'posts_per_page' => 4,
-    'post__in'  => get_option( 'sticky_posts' ),
-    'ignore_sticky_posts' => 1
+    'post_status' => 'publish',
+    'numberposts' => -1,
+    'suppress_filters' => true,
+    'tax_query' => array(
+      array(
+        'taxonomy' => 'post_format',
+        'field' => 'slug',
+        'terms' => 'post-format-standard',
+      )
+    )
   );
   $query = new WP_Query( $args );
   if ( $query->have_posts() ) {
@@ -15,8 +20,7 @@ function exiled_latest_sticky() {
     while ( $query->have_posts() ) {
       $query->the_post();
       $title = get_the_title();
-      $url_source = get_post_meta(get_the_ID(), 'source-url', true);
-      if (!empty( $url_source)) { $url = $url_source; } else { $url = get_permalink(); }
+      $url = get_permalink();
       $absolute_url = get_permalink();
       $naturalTime = get_the_date();
       $humanTime = human_time_diff( get_the_time('U'), current_time('timestamp') ) . ' ago';
@@ -28,7 +32,6 @@ function exiled_latest_sticky() {
         <h5 class="mt-0 mb-1">
           <a href="<?php echo $url; ?>"><span><?php echo $title; ?></span></a>
           <small class="datetime pl-2"><?php echo $humanTime; ?></small>
-          <span class="linked-list-permalink pl-2 sr-only"><a href="<?php echo $absolute_url; ?>" rel="bookmark" class="glyph">&#8734;</a></span>
         </h5>
       </div>
     </li>
@@ -38,4 +41,4 @@ function exiled_latest_sticky() {
 wp_reset_postdata();
 }
 
-exiled_latest_sticky();
+add_shortcode('render_posts', 'exiled_render_posts');

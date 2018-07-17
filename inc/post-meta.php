@@ -23,12 +23,12 @@ function render_post_meta_box($object, $box){
 
     <?php wp_nonce_field( basename( __FILE__ ), 'post_meta_nonce' ); ?>
     <p>
-      <label for="news-source-name">Source Name</label>
-      <input type="text" name="news-source-name" id="news-source-name" value="<?php echo get_post_meta($object->ID, 'source-name', true); ?>"/>
+      <label for="source-name">Source Name</label>
+      <input type="text" name="source-name" id="source-name" value="<?php echo get_post_meta($object->ID, 'source-name', true); ?>"/>
     </p>
     <p>
-      <label for="news-source-url">Source URL</label>
-      <input type="text" name="news-source-url" id="news-source-url" value="<?php echo get_post_meta($object->ID, 'source-url', true); ?>"/>
+      <label for="source-url">Source URL</label>
+      <input type="text" name="source-url" id="source-url" value="<?php echo get_post_meta($object->ID, 'source-url', true); ?>"/>
     </p>
 <?php
 }

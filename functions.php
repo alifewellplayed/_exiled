@@ -87,7 +87,6 @@ if ( ! function_exists( '_exiled_setup' ) ) :
       'aside',
       'status',
       'gallery',
-      'aside',
       'link',
       'video',
       'audio',
@@ -140,19 +139,25 @@ function _exiled_scripts() {
 }
 add_action( 'wp_enqueue_scripts', '_exiled_scripts' );
 
+// Helper functions
+require get_template_directory() . '/inc/util.php';
+
 // Custom post meta fields
 require get_template_directory() . '/inc/post-meta.php';
 
 // Register custom post types
 require get_template_directory() . '/inc/post-type/notes.php';
 require get_template_directory() . '/inc/post-type/promoted.php';
-require get_template_directory() . '/inc/post-type/zine.php';
+require get_template_directory() . '/inc/post-type/collection.php';
 
 // Register custom taxonomies
 require get_template_directory() . '/inc/taxonomy/timeline.php';
 
 // Custom template tags for this theme.
 require get_template_directory() . '/inc/template-tags.php';
+
+// Load Theme specific Shortcodes
+require get_template_directory() . '/inc/shortcodes.php';
 
 // Functions which enhance the theme by hooking into WordPress.
 require get_template_directory() . '/inc/template-functions.php';
