@@ -16,7 +16,7 @@ function exiled_render_posts() {
   );
   $query = new WP_Query( $args );
   if ( $query->have_posts() ) {
-    echo '<ul class="list-unstyled replica-media-list">';
+    echo '<ul class="list-unstyled exiled-media-list">';
 
     the_date('F Y', '<h2 class="h6 my-4 datetime">', '</h2>');
 

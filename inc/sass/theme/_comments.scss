@@ -1,0 +1,105 @@
+//  Comments
+
+ ol.comment-list {
+     list-style:none;
+     margin:0 0 1em;
+     padding:0;
+     text-indent:0;
+ 	li {}
+ 	.alt {}
+	.bypostauthor {}
+	.byuser {}
+	.comment-author-admin {}
+
+	.comment {
+		border-bottom: 1px solid #ddd;
+		padding:1em;
+
+		.comment-author {} // end .comment-author
+
+
+		.vcard {
+			font-weight: 14px;
+			cite.fn {
+				a.url {}
+			 } // end cite.fn
+
+			 .avatar {
+			 	border:5px solid #ccc;
+			 	float:right;
+			 	margin:0 0 20px 20px;
+			 } // end .avatar
+
+			 .avatar-32 {} // end .avatar-32
+			 .photo {} // end .photo
+			 .says {} // ebd .says
+
+		}  // end .vcard
+
+		.comment-metadata {} // end .commentmetadata
+		.comment-meta {
+      margin-bottom: 10px;
+			font-size: 11px;
+				a { color: #ccc;} // end a
+		} // end div.comment-meta
+
+		p {font-size: 12px;} // end p
+
+		ul {
+			font-size: 12px;
+			list-style: none;
+			margin: 0 0 0 20px;
+		} // end ul
+
+		.reply {
+			font-size: 11px;
+			a {font-weight: bold;} // end a
+		} // end reply
+
+		 .children {
+			list-style:none;
+			margin: 12px;
+			text-indent:0;
+
+			li {} // end li
+
+			.alt {}
+			.bypostauthor {}
+			.byuser {}
+			.comment {}
+			.comment-author-admin {}
+
+			.depth-2 { border-left: 5px solid #ccc; margin:0 0 10px 10px; }
+			.depth-3 { border-left: 5px solid #bbb; margin:0 0 10px 10px; }
+			.depth-4 { border-left: 5px solid #aaa; margin:0 0 10px 10px; }
+			.depth-5 {}
+			.odd {} // end .odd
+		}  // end ul.children
+
+	}  // end li.comment
+
+	.even {background:#fff;}
+	.odd {background:#f6f6f6;}
+	.parent {border-left:5px solid #ddd;}
+	.thread-alt {}
+	.thread-even {}
+	.thread-odd {}
+
+ } // end commentlist
+
+ .comment-form {
+   #comment {
+     @extend .form-control;
+   }
+   label {
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    color: darken($body-bg, 33%);
+    font-size: 90%;
+   }
+   .submit {
+     @extend .btn;
+     border-color: $primary;
+     background-color: $primary;
+   }
+ }

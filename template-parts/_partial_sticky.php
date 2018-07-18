@@ -11,7 +11,7 @@ function exiled_latest_sticky() {
   );
   $query = new WP_Query( $args );
   if ( $query->have_posts() ) {
-    echo '<ul class="list-unstyled replica-media-list layout-single-column">';
+    echo '<ul class="list-unstyled exiled-media-list layout-single-column">';
     while ( $query->have_posts() ) {
       $query->the_post();
       $title = get_the_title();
