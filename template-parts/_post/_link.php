@@ -7,21 +7,21 @@
  * @package _Exiled
  */
  $classes = array(
-		'layout-single-column',
-    'mb-5',
-    'linked',
-    'post',
-    'entry'
-	);
-
- $url = '';
+   'layout-single-column',
+   'mb-5',
+   'linked',
+   'post',
+   'entry'
+ );
+ $url_source = get_post_meta(get_the_ID(), 'source-url', true);
+ $permalink = get_permalink();
+ if (!empty( $url_source)) { $url = $url_source; } else { $url = get_permalink(); }
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class( $classes ); ?>>
 	<header class="entry-header">
 		<?php
-		the_title( '<h3 class="entry-title"><a href="' . esc_url( $url ) . '" rel="bookmark">', '</a></h3>' );
-
+		the_title( '<h3 class="entry-title h3"><a href="' . esc_url( $url ) . '" rel="bookmark">', '</a><span class="linked-list-permalink"><a href="' . esc_url($permalink) . '" rel="bookmark" class="glyph">&#8734;</a></span></h3>' );
 		if ( 'post' === get_post_type() ) :
 			?>
 			<div class="entry-meta sr-only">
@@ -45,11 +45,6 @@
 				)
 			),
 			get_the_title()
-		) );
-
-		wp_link_pages( array(
-			'before' => '<div class="page-links">' . esc_html__( 'Pages:', '_exiled' ),
-			'after'  => '</div>',
 		) );
 		?>
 	</div><!-- .entry-content -->

@@ -24,14 +24,13 @@ function exiled_latest_sticky() {
       <li class="media">
         <div class="media-body">
           <time datetime="<?php echo $naturalTime; ?>" class="sr-only"><?php echo $naturalTime; ?></time>
-        </datetime>
         <h5 class="mt-0 mb-1">
           <a href="<?php echo $url; ?>"><span><?php echo $title; ?></span></a>
           <small class="datetime pl-2"><?php echo $humanTime; ?></small>
           <span class="linked-list-permalink pl-2 sr-only"><a href="<?php echo $absolute_url; ?>" rel="bookmark" class="glyph">&#8734;</a></span>
         </h5>
-      </div>
-    </li>
+        </div>
+      </li>
   <?php }
   echo '</ul>';
 }

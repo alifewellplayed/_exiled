@@ -139,6 +139,15 @@ function _exiled_scripts() {
 }
 add_action( 'wp_enqueue_scripts', '_exiled_scripts' );
 
+function update_main_query( $query ) {
+  if ( $query->is_home() && $query->is_main_query() ) { // Run only on the homepage
+    //$query->query_vars['cat'] = -2; // Exclude featured category
+    $query->query_vars['ignore_sticky_posts'] = 1;
+  }
+}
+// Hook my above function to the pre_get_posts action
+add_action( 'pre_get_posts', 'update_main_query' );
+
 // Helper functions
 require get_template_directory() . '/inc/util.php';
 

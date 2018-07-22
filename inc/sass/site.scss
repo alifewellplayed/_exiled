@@ -12,6 +12,8 @@
 @import 'theme/sticky';
 @import 'theme/entry';
 @import 'theme/post/aside';
+@import 'theme/post/link';
+@import 'theme/post/media';
 @import 'theme/page';
 @import 'theme/topics';
 @import 'theme/archive';
@@ -22,10 +24,5 @@
 // Components
 @import 'theme/pulse';
 @import 'theme/modals';
-
-// Contrib
-//@import 'theme/contrib/publisher';
-//@import 'theme/contrib/micro';
-//@import 'theme/contrib/zine';
 
 @import 'theme/mobile';
