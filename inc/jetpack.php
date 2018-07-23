@@ -70,6 +70,7 @@ add_filter( 'wp', '_exiled_jetpack_remove_related_potsts', 20 );
 
 function _exiled_jetpack_related_posts( $atts ) {
   $posts_titles = array();
+  $format = 'F Y';
 
   if ( class_exists( 'Jetpack_RelatedPosts' ) && method_exists( 'Jetpack_RelatedPosts', 'init_raw' ) ) {
     $related = Jetpack_RelatedPosts::init_raw()
@@ -79,12 +80,13 @@ function _exiled_jetpack_related_posts( $atts ) {
       array( 'size' => 4 )
     );
     if ( $related ) {
-      echo '<ul class="list-unstyled exiled-media-list layout-single-column my-5">';
+      echo '<h5 class="mb-3 layout-single-column">Related:</h5>';
+      echo '<ul class="list-unstyled exiled-media-list layout-single-column mb-5">';
       foreach ( $related as $result ) {
         $post_ID = get_post( $result[ 'id' ] );
         $title = get_the_title($post_ID);
         $url = get_permalink($post_ID);
-        $naturalTime = get_the_date($post_ID);
+        $naturalTime = get_the_date($format, $post_ID);
       ?>
       <li class="media">
         <div class="media-body">

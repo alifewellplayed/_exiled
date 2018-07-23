@@ -10869,24 +10869,24 @@ h1, h2, h3, h4, h5, h6 {
   .entry .entry-header .glyph:hover {
     color: #000; }
 
-.entry .entry-body {
+.entry .entry-content {
   margin-bottom: 20px; }
-  .entry .entry-body h2, .entry .entry-body h3, .entry .entry-body h4, .entry .entry-body h5, .entry .entry-body h6 {
+  .entry .entry-content h2, .entry .entry-content h3, .entry .entry-content h4, .entry .entry-content h5, .entry .entry-content h6 {
     font-weight: 100;
     color: #1fd9b7; }
-  .entry .entry-body p {
+  .entry .entry-content p {
     font-size: 1rem;
     font-weight: 100;
     letter-spacing: 1.5px; }
-    .entry .entry-body p.lead {
+    .entry .entry-content p.lead {
       font-family: "europa", "effra", -apple-system, system-ui, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif; }
-  .entry .entry-body a {
+  .entry .entry-content a {
     color: #181820;
     padding-bottom: 1px;
     border-bottom: 1px solid #181820; }
-    .entry .entry-body a:hover {
+    .entry .entry-content a:hover {
       color: #000; }
-  .entry .entry-body blockquote {
+  .entry .entry-content blockquote {
     font-weight: 100;
     font-size: 1.25rem;
     border-left: 1px solid #000;
@@ -10942,7 +10942,7 @@ h1, h2, h3, h4, h5, h6 {
   font-size: 2rem;
   font-weight: 100; }
 
-.entry.linked .entry-body p {
+.entry.linked .entry-content p {
   font-size: .9rem; }
 
 .entry.media > a {
