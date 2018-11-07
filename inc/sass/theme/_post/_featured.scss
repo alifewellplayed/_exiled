@@ -1,0 +1,30 @@
+.layout-full-width.featured {
+  .entry-header {
+    height: 75vh;
+    background-color: darken($body-bg, 6%);
+    .h1 {font-size: 3.5rem;}
+  }
+  .header-inner,
+  .entry-content {
+    margin: 0 auto;
+    max-width: 760px;
+    padding: 16px;
+  }
+
+  .entry-content {
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+  }
+}
+
+
+@media all and (min-width:701px) {
+  .layout-full-width.featured {
+    .entry-content {
+      padding-top: 30px;
+      margin-top: -60px;
+    }
+  }
+}

@@ -133,6 +133,7 @@
   }
 }
 
-@import 'post/aside';
-@import 'post/link';
-@import 'post/media';
+@import '_post/aside';
+@import '_post/link';
+@import '_post/media';
+@import '_post/featured';
