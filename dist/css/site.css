@@ -10991,10 +10991,22 @@ h1, h2, h3, h4, h5, h6 {
       letter-spacing: 2px; }
 
 .layout-full-width.featured .entry-header {
+  position: relative;
+  z-index: 1;
   height: 75vh;
-  background-color: #e8e8e8; }
+  background-color: black; }
   .layout-full-width.featured .entry-header .h1 {
     font-size: 3.5rem; }
+  .layout-full-width.featured .entry-header::after {
+    background: linear-gradient(45deg, rgba(50, 40, 60, 0.9) 1%, rgba(142, 43, 136, 0.6) 25%, rgba(31, 217, 183, 0.7) 100%);
+    content: "";
+    opacity: .5;
+    position: absolute;
+    right: 0;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    z-index: 2; }
 
 .layout-full-width.featured .header-inner,
 .layout-full-width.featured .entry-content {
@@ -11002,14 +11014,23 @@ h1, h2, h3, h4, h5, h6 {
   max-width: 760px;
   padding: 16px; }
 
-.layout-full-width.featured .entry-content img {
-  max-width: 100%;
-  height: auto; }
+.layout-full-width.featured .entry-content {
+  position: relative;
+  z-index: 10; }
+  .layout-full-width.featured .entry-content img {
+    max-width: 100%;
+    height: auto; }
 
 @media all and (min-width: 701px) {
   .layout-full-width.featured .entry-content {
-    padding-top: 30px;
-    margin-top: -60px; } }
+    background-color: #f7f7f7;
+    padding: 30px 40px;
+    margin-top: -60px; }
+    .layout-full-width.featured .entry-content p {
+      font-size: 1.25rem;
+      line-height: 1.75;
+      font-weight: 300;
+      margin-bottom: 2rem; } }
 
 .page .page-inner .entry-body p {
   font-size: 1rem;

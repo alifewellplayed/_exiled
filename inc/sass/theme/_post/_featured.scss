@@ -1,8 +1,20 @@
 .layout-full-width.featured {
   .entry-header {
+    position: relative;
+    z-index: 1;
     height: 75vh;
-    background-color: darken($body-bg, 6%);
+    background-color: darken($primary, 85%);
     .h1 {font-size: 3.5rem;}
+
+    &::after {
+      background: linear-gradient(45deg, rgba(50, 40, 60, .9) 1%, rgba(142, 43, 136, .6) 25%, rgba($primary, .7) 100%);
+      content: "";
+      opacity: .5;
+      position: absolute;
+      right: 0; left: 0;
+      top: 0; bottom: 0;
+      z-index: 2;
+    }
   }
   .header-inner,
   .entry-content {
@@ -12,6 +24,8 @@
   }
 
   .entry-content {
+    position: relative;
+    z-index: 10;
     img {
       max-width: 100%;
       height: auto;
@@ -19,12 +33,18 @@
   }
 }
 
-
 @media all and (min-width:701px) {
   .layout-full-width.featured {
     .entry-content {
-      padding-top: 30px;
+      background-color: $body-bg;
+      padding: 30px 40px;
       margin-top: -60px;
+      p {
+        font-size: 1.25rem;
+        line-height: 1.75;
+        font-weight: 300;
+        margin-bottom: 2rem;
+      }
     }
   }
 }

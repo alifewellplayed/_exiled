@@ -11,10 +11,15 @@
 
  $_exiled_title = get_bloginfo( 'name', 'display' );
  $_exiled_description = get_bloginfo( 'description', 'display' );
+
+ $site_author =  get_option('site_author');
+ $site_website = get_option('site_author_website');
+ $site_email =  get_option('social_email');
+
+
 ?>
 	</div><!-- #content -->
 </div><!-- #river -->
-
 	<footer id="colophon" class="site-footer" role="footer">
 		<div class="site-info layout-single-column">
       <?php get_sidebar(); ?>
@@ -25,7 +30,7 @@
         ) ); ?>
       </nav>
       <small class="d-block"><?php echo $_exiled_title; ?>, Copyright &copy; <?php echo date("Y"); ?></small>
-      <small class="d-block">By <a href="https://underlost.net/">Tyler Rilling</a></small>
+      <small class="d-block">By <a href="<?php echo $site_website; ?>">$site_author</a></small>
 		</div><!-- .site-info -->
 	</footer><!-- #colophon -->
 </div><!-- #page -->

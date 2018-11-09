@@ -12,11 +12,11 @@ get_header();
 
 	<section id="primary" class="content-area">
 		<main id="main" class="site-main">
+			<?php include get_template_directory() . '/template-parts/_partial_sticky.php'; ?>
 
 		<?php if ( have_posts() ) : ?>
-
 			<header class="page-header">
-				<h1 class="page-title">
+				<h1 class="page-title h4">
 					<?php
 					/* translators: %s: search query. */
 					printf( esc_html__( 'Search Results for: %s', '_exiled' ), '<span>' . get_search_query() . '</span>' );
@@ -51,5 +51,4 @@ get_header();
 	</section><!-- #primary -->
 
 <?php
-get_sidebar();
 get_footer();

@@ -16,8 +16,10 @@ function register_theme_options() {
 	//register our settings
 	register_setting( 'main-options', 'site_logo' );
   register_setting( 'main-options', 'site_author' );
+	register_setting( 'main-options', 'site_author_website' );
   register_setting( 'main-options', 'footer_logo' );
   register_setting( 'main-options', 'footer_content' );
+	register_setting( 'main-options', 'social_email');
   register_setting( 'main-options', 'social_facebook');
   register_setting( 'main-options', 'social_twitter');
   register_setting( 'main-options', 'social_google');
@@ -98,6 +100,12 @@ jQuery(document).ready(function($){
       <td>
         <textarea id="footer_content" name="footer_content" class="widefat" rows="10"><?php echo get_option('footer_content'); ?></textarea>
         <p class="description">Content like Copyright date.</p>
+      </td>
+    </tr>
+		<tr>
+      <th scope="row">Site Email</th>
+      <td>
+        <input id="social_email" name="social_email" class="regular-text code" type="text" value="<?php echo get_option('social_email'); ?>" />
       </td>
     </tr>
     <tr>

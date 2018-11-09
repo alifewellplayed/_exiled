@@ -97,9 +97,10 @@ gulp.task('concat-js', function() {
       'node_modules/bootstrap/dist/js/bootstrap.bundle.min.js',
       'node_modules/owl.carousel/dist/owl.carousel.js',
       'node_modules/paroller.js/dist/jquery.paroller.js',
-      //'node_modules/pace-progress/pace.js',
+      'node_modules/pace-js/pace.js',
       //'node_modules/fullpage.js/dist/fullpage.min.js',
       'inc/js/vline.jquery.js',
+      'inc/js/skip-link-focus-fix.js',
       'inc/js/functions.js',
     ])
     .pipe(sourcemaps.init())
