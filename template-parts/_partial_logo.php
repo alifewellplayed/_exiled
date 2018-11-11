@@ -9,7 +9,7 @@
 ?>
 
 <svg id="logo">
-  <g fill-rule="nonzero" fill="#8787ff" stroke-width="1">
+  <g fill-rule="nonzero" fill="#00403c" stroke-width="1">
     <g id="SiteLogo">
       <polygon class="LogoShape" id="LogoShape-t" points="27.17 9.123 0.83 18.247 0.83 0"></polygon>
       <polygon class="LogoShape" id="LogoShape-b" points="0.83 22.877 27.17 13.753 27.17 32"></polygon>

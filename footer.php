@@ -30,7 +30,7 @@
         ) ); ?>
       </nav>
       <small class="d-block"><?php echo $_exiled_title; ?>, Copyright &copy; <?php echo date("Y"); ?></small>
-      <small class="d-block">By <a href="<?php echo $site_website; ?>">$site_author</a></small>
+      <small class="d-block">By <a href="<?php echo $site_website; ?>"><?php echo $site_author; ?></a></small>
 		</div><!-- .site-info -->
 	</footer><!-- #colophon -->
 </div><!-- #page -->

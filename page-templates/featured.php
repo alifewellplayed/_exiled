@@ -21,6 +21,18 @@
 
 <body <?php body_class(); ?>>
 <div id="pageFull" class="site">
+
+	<header role="masthead" class="site-header">
+    <?php include get_template_directory() . '/template-parts/_partial_promoted.php'; ?>
+    <div class="site-branding site-header-inner">
+      <a href="<?php echo esc_url( home_url( '/' ) ); ?>">
+        <?php include get_template_directory() . '/template-parts/_partial_logo.php'; ?>
+      </a>
+      <h1 class="sr-only"><?php echo $_exiled_title; ?></h1>
+      <h6 class="sr-only site-description"><span><?php echo $_exiled_description; ?></span></h6>
+    </div><!-- .site-branding -->
+  </header><!-- #masthead -->
+
   <div class="site-content-full">
     <main id="main" class="site-main">
 		<?php

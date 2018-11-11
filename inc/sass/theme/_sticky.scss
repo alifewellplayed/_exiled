@@ -26,9 +26,7 @@
             background-color: $primary;
           }
           &:hover {
-            &:before {
-              background-color: $link-hover-color;
-            }
+            &:before { background-color: $secondary; }
           }
         }
         .glyph:before { display: none; }
@@ -38,7 +36,6 @@
         font-weight: 100;
         letter-spacing: 1px;
         font-size: .85rem;
-        text-shadow: 1px 1px 1px $text-shadow;
       }
     }
 

@@ -1,7 +1,6 @@
 .entry {
   a {transition: all .3s, color .3s;}
-  a:hover { text-shadow: 0 0 1px $link-hover-color; }
-
+  a:hover {}
   .entry-header {
     .h2 {
       font-size: 2rem;
@@ -14,7 +13,7 @@
         //text-shadow: none;
         border-bottom: 1px solid transparent;
         &:hover {
-          //color: $link-hover-color;
+          color: $link-hover-color;
           border-bottom-color: darken($body-bg, 10%);
         }
       }
@@ -35,23 +34,24 @@
           width: 100%;
           position: absolute;
           z-index: 5;
-          bottom: -5px; left: 0; right: 0;
+          bottom: -5px;
         }
         &:hover {
           &:before {
-            background-color: $primary;
+            background-color: $secondary;
           }
         }
       }
     }
-
-    .glyph {
-      color: $link-color;
+    .linked-list-permalink {
       font: 19px/19px "Helvetica Neue", Helvetica, Arial, sans-serif;
       border-width: 0;
       padding: 0 4px;
-      &:before { display: none; }
-      &:hover { color: $black; }
+      a {
+        color: $secondary;
+        &::before { display: none !important; }
+        &:hover { color: $primary; }
+      }
     }
   }
 
@@ -86,13 +86,12 @@
   .entry-footer {
     .cat-links {
       position: relative;
-      //border-top: 1px solid darken($body-color, 40%);
       padding-top: 5px;
-      color: darken($body-color, 20%);
+      color: $secondary;
       font-size: 90%;
       text-transform: uppercase;
-      a {color: darken($body-color, 5%);}
-      a:hover {color: darken($body-color, 20%); text-shadow: none;}
+      a {color: $secondary;}
+      a:hover {color: $primary; }
       &:before {
         content: ' ';
         display: block;
@@ -100,17 +99,6 @@
         height: 2px;
         background-color: darken($body-bg, 25%);
         margin-bottom: 5px;
-      }
-      .list-inline {
-        & > li {
-          &:after {
-            content: '/';
-            padding-left: 8px;
-          }
-          &:last-child:after {
-            display: none;
-          }
-        }
       }
     }
   }
@@ -127,9 +115,16 @@
       background-position: -2px 0;
       background: url('../svg/bg_tile_x.svg') top left repeat;
       background-size: 20px;
-      //opacity: .25;
       margin: 40px 0 80px;
     }
+  }
+
+  .edit-link {
+    font-size: 75%;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    background-color: darken($body-bg, 10%);
+    padding: 4px 8px;
   }
 }
 

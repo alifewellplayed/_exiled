@@ -12,10 +12,10 @@
       left: 0px; right: 0px;
       top: 0px; bottom: 0px;
       z-index: 5;
-      background-color: rgba($header-background, .45);
+      background-color: rgba($secondary, .45);
       transition: all .3s, opacity .3s;
     }
-    &:hover:before { background-color: rgba($header-background, .65);}
+    &:hover:before { background-color: rgba($secondary, .65);}
   }
   figure {
     position: relative;
