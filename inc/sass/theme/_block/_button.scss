@@ -1,0 +1,6 @@
+.entry .entry-content {
+  .wp-block-button .wp-block-button__link {
+    @extend .btn;
+    @extend .btn-primary;
+  }
+}

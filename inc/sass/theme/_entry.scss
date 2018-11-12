@@ -52,6 +52,7 @@
       letter-spacing: 1.5px;
       //text-shadow: 1px 1px 1px #000;
       &.lead {font-family: $font-family-sans-serif;}
+      img {max-width: 100%;}
     }
     a {
       color: $link-color;

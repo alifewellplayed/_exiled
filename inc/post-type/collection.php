@@ -65,6 +65,9 @@ function _exiled_collection() {
 }
 add_action( 'init', '_exiled_collection', 0 );
 
+add_action( 'load-post.php', 'collection_meta_boxes_setup' );
+add_action( 'load-post-new.php', 'collection_meta_boxes_setup' );
+
 /* Meta box setup function. */
 function collection_meta_boxes_setup() {
   add_action( 'add_meta_boxes', 'collection_meta_boxes' );
@@ -72,7 +75,7 @@ function collection_meta_boxes_setup() {
 }
 
 function collection_meta_boxes(){
-  add_meta_box( 'related_meta_box', 'Posts', 'render_collection_related_box', '_exiled_collection', 'side');
+  add_meta_box( 'related_meta_box', 'Posts', 'render_collection_related_box', '_exiled_collection', 'normal');
 }
 
 function render_collection_related_box($object, $box){
@@ -95,11 +98,19 @@ function render_collection_related_box($object, $box){
 
   <?php wp_nonce_field( basename( __FILE__ ), 'post_related_nonce' ); ?>
 
-  <p>
+	<style>
+		.collection-post-option {
+			width: 48%;
+			display: inline-block;
+		}
+	</style>
+	<p>
     <?php foreach ($post_options as $key => $val){ ?>
-      <label><input type="checkbox" name="related-posts[]" value="<?php echo $key; ?>" <?php if (in_array($key, $curr_related)){ echo "checked"; }?>> <?php echo $val; ?></label><br>
+      <label class="collection-post-option">
+				<input type="checkbox" name="related-posts[]" value="<?php echo $key; ?>" <?php if (in_array($key, $curr_related)){ echo "checked"; }?>> <?php echo $val; ?>
+			</label>
     <?php } ?>
-  </p>
+	</p>
   <?php
 }
 
