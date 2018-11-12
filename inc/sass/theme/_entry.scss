@@ -19,28 +19,13 @@
       }
     }
     .h3 {
-      font: 13px/27px $font-family-sans-serif;
+      font: 13px/25px $font-family-sans-serif;
       letter-spacing: 1.5px;
       text-transform: uppercase;
-      a {
-        color: $link-color;
-        position: relative;
-        span {position: relative; z-index: 10;}
-        &:before {
-          content: ' ';
-          display: block;
-          background-color: $primary;
-          height: 1px;
-          width: 100%;
-          position: absolute;
-          z-index: 5;
-          bottom: -5px;
-        }
-        &:hover {
-          &:before {
-            background-color: $secondary;
-          }
-        }
+      position: relative;
+      span {border-bottom: 1px solid $primary;}
+      &:hover {
+        span{ background-color: darken($body-bg, 5%);}
       }
     }
     .linked-list-permalink {
@@ -120,11 +105,17 @@
   }
 
   .edit-link {
+    display: none;
     font-size: 75%;
     text-transform: uppercase;
     letter-spacing: 1px;
     background-color: darken($body-bg, 10%);
     padding: 4px 8px;
+    float: right;
+  }
+
+  &:hover {
+    .edit-link {display: inline-block;}
   }
 }
 
@@ -132,3 +123,4 @@
 @import '_post/link';
 @import '_post/media';
 @import '_post/featured';
+@import '_post/liveblog';

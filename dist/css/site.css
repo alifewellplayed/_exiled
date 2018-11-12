@@ -4813,20 +4813,26 @@ select.form-control:focus::-ms-value, .comment-form select#comment:focus::-ms-va
   .form-control-plaintext.form-control-sm, .input-group-sm > .form-control-plaintext.form-control, .comment-form .input-group-sm > .form-control-plaintext#comment,
   .input-group-sm > .input-group-prepend > .form-control-plaintext.input-group-text,
   .input-group-sm > .input-group-append > .form-control-plaintext.input-group-text,
-  .input-group-sm > .input-group-prepend > .form-control-plaintext.btn, .comment-form .input-group-sm > .input-group-prepend > .form-control-plaintext.submit,
-  .input-group-sm > .input-group-append > .form-control-plaintext.btn, .comment-form .input-group-sm > .input-group-append > .form-control-plaintext.submit, .form-control-plaintext.form-control-lg, .input-group-lg > .form-control-plaintext.form-control, .comment-form .input-group-lg > .form-control-plaintext#comment,
+  .input-group-sm > .input-group-prepend > .form-control-plaintext.btn, .input-group-sm > .input-group-prepend > .form-control-plaintext.liveblog-publish-btn,
+  .input-group-sm > .input-group-prepend > .form-control-plaintext.liveblog-save-btn, .comment-form .input-group-sm > .input-group-prepend > .form-control-plaintext.submit,
+  .input-group-sm > .input-group-append > .form-control-plaintext.btn, .input-group-sm > .input-group-append > .form-control-plaintext.liveblog-publish-btn,
+  .input-group-sm > .input-group-append > .form-control-plaintext.liveblog-save-btn, .comment-form .input-group-sm > .input-group-append > .form-control-plaintext.submit, .form-control-plaintext.form-control-lg, .input-group-lg > .form-control-plaintext.form-control, .comment-form .input-group-lg > .form-control-plaintext#comment,
   .input-group-lg > .input-group-prepend > .form-control-plaintext.input-group-text,
   .input-group-lg > .input-group-append > .form-control-plaintext.input-group-text,
-  .input-group-lg > .input-group-prepend > .form-control-plaintext.btn, .comment-form .input-group-lg > .input-group-prepend > .form-control-plaintext.submit,
-  .input-group-lg > .input-group-append > .form-control-plaintext.btn, .comment-form .input-group-lg > .input-group-append > .form-control-plaintext.submit {
+  .input-group-lg > .input-group-prepend > .form-control-plaintext.btn, .input-group-lg > .input-group-prepend > .form-control-plaintext.liveblog-publish-btn,
+  .input-group-lg > .input-group-prepend > .form-control-plaintext.liveblog-save-btn, .comment-form .input-group-lg > .input-group-prepend > .form-control-plaintext.submit,
+  .input-group-lg > .input-group-append > .form-control-plaintext.btn, .input-group-lg > .input-group-append > .form-control-plaintext.liveblog-publish-btn,
+  .input-group-lg > .input-group-append > .form-control-plaintext.liveblog-save-btn, .comment-form .input-group-lg > .input-group-append > .form-control-plaintext.submit {
     padding-right: 0;
     padding-left: 0; }
 
 .form-control-sm, .input-group-sm > .form-control, .comment-form .input-group-sm > #comment,
 .input-group-sm > .input-group-prepend > .input-group-text,
 .input-group-sm > .input-group-append > .input-group-text,
-.input-group-sm > .input-group-prepend > .btn, .comment-form .input-group-sm > .input-group-prepend > .submit,
-.input-group-sm > .input-group-append > .btn, .comment-form .input-group-sm > .input-group-append > .submit {
+.input-group-sm > .input-group-prepend > .btn, .input-group-sm > .input-group-prepend > .liveblog-publish-btn,
+.input-group-sm > .input-group-prepend > .liveblog-save-btn, .comment-form .input-group-sm > .input-group-prepend > .submit,
+.input-group-sm > .input-group-append > .btn, .input-group-sm > .input-group-append > .liveblog-publish-btn,
+.input-group-sm > .input-group-append > .liveblog-save-btn, .comment-form .input-group-sm > .input-group-append > .submit {
   padding: 0.25rem 0.5rem;
   font-size: 0.875rem;
   line-height: 1.5;
@@ -4835,15 +4841,19 @@ select.form-control:focus::-ms-value, .comment-form select#comment:focus::-ms-va
 select.form-control-sm:not([size]):not([multiple]), .input-group-sm > select.form-control:not([size]):not([multiple]), .comment-form .input-group-sm > select#comment:not([size]):not([multiple]),
 .input-group-sm > .input-group-prepend > select.input-group-text:not([size]):not([multiple]),
 .input-group-sm > .input-group-append > select.input-group-text:not([size]):not([multiple]),
-.input-group-sm > .input-group-prepend > select.btn:not([size]):not([multiple]), .comment-form .input-group-sm > .input-group-prepend > select.submit:not([size]):not([multiple]),
-.input-group-sm > .input-group-append > select.btn:not([size]):not([multiple]), .comment-form .input-group-sm > .input-group-append > select.submit:not([size]):not([multiple]) {
+.input-group-sm > .input-group-prepend > select.btn:not([size]):not([multiple]), .input-group-sm > .input-group-prepend > select.liveblog-publish-btn:not([size]):not([multiple]),
+.input-group-sm > .input-group-prepend > select.liveblog-save-btn:not([size]):not([multiple]), .comment-form .input-group-sm > .input-group-prepend > select.submit:not([size]):not([multiple]),
+.input-group-sm > .input-group-append > select.btn:not([size]):not([multiple]), .input-group-sm > .input-group-append > select.liveblog-publish-btn:not([size]):not([multiple]),
+.input-group-sm > .input-group-append > select.liveblog-save-btn:not([size]):not([multiple]), .comment-form .input-group-sm > .input-group-append > select.submit:not([size]):not([multiple]) {
   height: calc(1.8125rem + 2px); }
 
 .form-control-lg, .input-group-lg > .form-control, .comment-form .input-group-lg > #comment,
 .input-group-lg > .input-group-prepend > .input-group-text,
 .input-group-lg > .input-group-append > .input-group-text,
-.input-group-lg > .input-group-prepend > .btn, .comment-form .input-group-lg > .input-group-prepend > .submit,
-.input-group-lg > .input-group-append > .btn, .comment-form .input-group-lg > .input-group-append > .submit {
+.input-group-lg > .input-group-prepend > .btn, .input-group-lg > .input-group-prepend > .liveblog-publish-btn,
+.input-group-lg > .input-group-prepend > .liveblog-save-btn, .comment-form .input-group-lg > .input-group-prepend > .submit,
+.input-group-lg > .input-group-append > .btn, .input-group-lg > .input-group-append > .liveblog-publish-btn,
+.input-group-lg > .input-group-append > .liveblog-save-btn, .comment-form .input-group-lg > .input-group-append > .submit {
   padding: 0.5rem 1rem;
   font-size: 1.25rem;
   line-height: 1.5;
@@ -4852,8 +4862,10 @@ select.form-control-sm:not([size]):not([multiple]), .input-group-sm > select.for
 select.form-control-lg:not([size]):not([multiple]), .input-group-lg > select.form-control:not([size]):not([multiple]), .comment-form .input-group-lg > select#comment:not([size]):not([multiple]),
 .input-group-lg > .input-group-prepend > select.input-group-text:not([size]):not([multiple]),
 .input-group-lg > .input-group-append > select.input-group-text:not([size]):not([multiple]),
-.input-group-lg > .input-group-prepend > select.btn:not([size]):not([multiple]), .comment-form .input-group-lg > .input-group-prepend > select.submit:not([size]):not([multiple]),
-.input-group-lg > .input-group-append > select.btn:not([size]):not([multiple]), .comment-form .input-group-lg > .input-group-append > select.submit:not([size]):not([multiple]) {
+.input-group-lg > .input-group-prepend > select.btn:not([size]):not([multiple]), .input-group-lg > .input-group-prepend > select.liveblog-publish-btn:not([size]):not([multiple]),
+.input-group-lg > .input-group-prepend > select.liveblog-save-btn:not([size]):not([multiple]), .comment-form .input-group-lg > .input-group-prepend > select.submit:not([size]):not([multiple]),
+.input-group-lg > .input-group-append > select.btn:not([size]):not([multiple]), .input-group-lg > .input-group-append > select.liveblog-publish-btn:not([size]):not([multiple]),
+.input-group-lg > .input-group-append > select.liveblog-save-btn:not([size]):not([multiple]), .comment-form .input-group-lg > .input-group-append > select.submit:not([size]):not([multiple]) {
   height: calc(2.875rem + 2px); }
 
 .form-group {
@@ -5158,7 +5170,8 @@ select.form-control-lg:not([size]):not([multiple]), .input-group-lg > select.for
     .form-inline .custom-control-label {
       margin-bottom: 0; } }
 
-.btn, .comment-form .submit {
+.btn, .liveblog-publish-btn,
+.liveblog-save-btn, .comment-form .submit {
   display: inline-block;
   font-weight: 400;
   text-align: center;
@@ -5178,50 +5191,77 @@ select.form-control-lg:not([size]):not([multiple]), .input-group-lg > select.for
   transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
   transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, -webkit-box-shadow 0.15s ease-in-out; }
   @media screen and (prefers-reduced-motion: reduce) {
-    .btn, .comment-form .submit {
+    .btn, .liveblog-publish-btn,
+    .liveblog-save-btn, .comment-form .submit {
       -webkit-transition: none;
       transition: none; } }
-  .btn:hover, .comment-form .submit:hover, .btn:focus, .comment-form .submit:focus {
+  .btn:hover, .liveblog-publish-btn:hover,
+  .liveblog-save-btn:hover, .comment-form .submit:hover, .btn:focus, .liveblog-publish-btn:focus,
+  .liveblog-save-btn:focus, .comment-form .submit:focus {
     text-decoration: none; }
-  .btn:focus, .comment-form .submit:focus, .btn.focus, .comment-form .focus.submit {
+  .btn:focus, .liveblog-publish-btn:focus,
+  .liveblog-save-btn:focus, .comment-form .submit:focus, .btn.focus, .focus.liveblog-publish-btn,
+  .focus.liveblog-save-btn, .comment-form .focus.submit {
     outline: 0;
     -webkit-box-shadow: 0 0 0 0.2rem rgba(0, 204, 189, 0.25);
     box-shadow: 0 0 0 0.2rem rgba(0, 204, 189, 0.25); }
-  .btn.disabled, .comment-form .disabled.submit, .btn:disabled, .comment-form .submit:disabled {
+  .btn.disabled, .disabled.liveblog-publish-btn,
+  .disabled.liveblog-save-btn, .comment-form .disabled.submit, .btn:disabled, .liveblog-publish-btn:disabled,
+  .liveblog-save-btn:disabled, .comment-form .submit:disabled {
     opacity: 0.65; }
-  .btn:not(:disabled):not(.disabled), .comment-form .submit:not(:disabled):not(.disabled) {
+  .btn:not(:disabled):not(.disabled), .liveblog-publish-btn:not(:disabled):not(.disabled),
+  .liveblog-save-btn:not(:disabled):not(.disabled), .comment-form .submit:not(:disabled):not(.disabled) {
     cursor: pointer; }
-  .btn:not(:disabled):not(.disabled):active, .comment-form .submit:not(:disabled):not(.disabled):active, .btn:not(:disabled):not(.disabled).active, .comment-form .submit:not(:disabled):not(.disabled).active {
+  .btn:not(:disabled):not(.disabled):active, .liveblog-publish-btn:not(:disabled):not(.disabled):active,
+  .liveblog-save-btn:not(:disabled):not(.disabled):active, .comment-form .submit:not(:disabled):not(.disabled):active, .btn:not(:disabled):not(.disabled).active, .liveblog-publish-btn:not(:disabled):not(.disabled).active,
+  .liveblog-save-btn:not(:disabled):not(.disabled).active, .comment-form .submit:not(:disabled):not(.disabled).active {
     background-image: none; }
 
-a.btn.disabled, .comment-form a.disabled.submit,
+a.btn.disabled, a.disabled.liveblog-publish-btn,
+a.disabled.liveblog-save-btn, .comment-form a.disabled.submit,
 fieldset:disabled a.btn,
+fieldset:disabled a.liveblog-publish-btn,
+fieldset:disabled a.liveblog-save-btn,
 fieldset:disabled .comment-form a.submit,
 .comment-form fieldset:disabled a.submit {
   pointer-events: none; }
 
-.btn-primary {
+.btn-primary, .liveblog-publish-btn,
+.liveblog-save-btn {
   color: #fff;
   background-color: #00CCBD;
   border-color: #00CCBD; }
-  .btn-primary:hover {
+  .btn-primary:hover, .liveblog-publish-btn:hover,
+  .liveblog-save-btn:hover {
     color: #fff;
     background-color: #00a69a;
     border-color: #00998e; }
-  .btn-primary:focus, .btn-primary.focus {
+  .btn-primary:focus, .liveblog-publish-btn:focus,
+  .liveblog-save-btn:focus, .btn-primary.focus, .focus.liveblog-publish-btn,
+  .focus.liveblog-save-btn {
     -webkit-box-shadow: 0 0 0 0.2rem rgba(0, 204, 189, 0.5);
     box-shadow: 0 0 0 0.2rem rgba(0, 204, 189, 0.5); }
-  .btn-primary.disabled, .btn-primary:disabled {
+  .btn-primary.disabled, .disabled.liveblog-publish-btn,
+  .disabled.liveblog-save-btn, .btn-primary:disabled, .liveblog-publish-btn:disabled,
+  .liveblog-save-btn:disabled {
     color: #fff;
     background-color: #00CCBD;
     border-color: #00CCBD; }
-  .btn-primary:not(:disabled):not(.disabled):active, .btn-primary:not(:disabled):not(.disabled).active,
-  .show > .btn-primary.dropdown-toggle {
+  .btn-primary:not(:disabled):not(.disabled):active, .liveblog-publish-btn:not(:disabled):not(.disabled):active,
+  .liveblog-save-btn:not(:disabled):not(.disabled):active, .btn-primary:not(:disabled):not(.disabled).active, .liveblog-publish-btn:not(:disabled):not(.disabled).active,
+  .liveblog-save-btn:not(:disabled):not(.disabled).active,
+  .show > .btn-primary.dropdown-toggle,
+  .show > .dropdown-toggle.liveblog-publish-btn,
+  .show > .dropdown-toggle.liveblog-save-btn {
     color: #fff;
     background-color: #00998e;
     border-color: #008c82; }
-    .btn-primary:not(:disabled):not(.disabled):active:focus, .btn-primary:not(:disabled):not(.disabled).active:focus,
-    .show > .btn-primary.dropdown-toggle:focus {
+    .btn-primary:not(:disabled):not(.disabled):active:focus, .liveblog-publish-btn:not(:disabled):not(.disabled):active:focus,
+    .liveblog-save-btn:not(:disabled):not(.disabled):active:focus, .btn-primary:not(:disabled):not(.disabled).active:focus, .liveblog-publish-btn:not(:disabled):not(.disabled).active:focus,
+    .liveblog-save-btn:not(:disabled):not(.disabled).active:focus,
+    .show > .btn-primary.dropdown-toggle:focus,
+    .show > .dropdown-toggle.liveblog-publish-btn:focus,
+    .show > .dropdown-toggle.liveblog-save-btn:focus {
       -webkit-box-shadow: 0 0 0 0.2rem rgba(0, 204, 189, 0.5);
       box-shadow: 0 0 0 0.2rem rgba(0, 204, 189, 0.5); }
 
@@ -5618,13 +5658,15 @@ fieldset:disabled .comment-form a.submit,
     color: #6c757d;
     pointer-events: none; }
 
-.btn-lg, .btn-group-lg > .btn, .comment-form .btn-group-lg > .submit {
+.btn-lg, .btn-group-lg > .btn, .btn-group-lg > .liveblog-publish-btn,
+.btn-group-lg > .liveblog-save-btn, .comment-form .btn-group-lg > .submit {
   padding: 0.5rem 1rem;
   font-size: 1.25rem;
   line-height: 1.5;
   border-radius: 0.3rem; }
 
-.btn-sm, .btn-group-sm > .btn, .comment-form .btn-group-sm > .submit {
+.btn-sm, .btn-group-sm > .btn, .btn-group-sm > .liveblog-publish-btn,
+.btn-group-sm > .liveblog-save-btn, .comment-form .btn-group-sm > .submit {
   padding: 0.25rem 0.5rem;
   font-size: 0.875rem;
   line-height: 1.5;
@@ -5846,44 +5888,87 @@ input[type="button"].btn-block {
   display: -ms-inline-flexbox;
   display: inline-flex;
   vertical-align: middle; }
-  .btn-group > .btn, .comment-form .btn-group > .submit,
+  .btn-group > .btn, .btn-group > .liveblog-publish-btn,
+  .btn-group > .liveblog-save-btn, .comment-form .btn-group > .submit,
   .btn-group-vertical > .btn,
+  .btn-group-vertical > .liveblog-publish-btn,
+  .btn-group-vertical > .liveblog-save-btn,
   .comment-form .btn-group-vertical > .submit {
     position: relative;
     -webkit-box-flex: 0;
     -ms-flex: 0 1 auto;
     flex: 0 1 auto; }
-    .btn-group > .btn:hover, .comment-form .btn-group > .submit:hover,
+    .btn-group > .btn:hover, .btn-group > .liveblog-publish-btn:hover,
+    .btn-group > .liveblog-save-btn:hover, .comment-form .btn-group > .submit:hover,
     .btn-group-vertical > .btn:hover,
+    .btn-group-vertical > .liveblog-publish-btn:hover,
+    .btn-group-vertical > .liveblog-save-btn:hover,
     .comment-form .btn-group-vertical > .submit:hover {
       z-index: 1; }
-    .btn-group > .btn:focus, .comment-form .btn-group > .submit:focus, .btn-group > .btn:active, .comment-form .btn-group > .submit:active, .btn-group > .btn.active, .comment-form .btn-group > .active.submit,
+    .btn-group > .btn:focus, .btn-group > .liveblog-publish-btn:focus,
+    .btn-group > .liveblog-save-btn:focus, .comment-form .btn-group > .submit:focus, .btn-group > .btn:active, .btn-group > .liveblog-publish-btn:active,
+    .btn-group > .liveblog-save-btn:active, .comment-form .btn-group > .submit:active, .btn-group > .btn.active, .btn-group > .active.liveblog-publish-btn,
+    .btn-group > .active.liveblog-save-btn, .comment-form .btn-group > .active.submit,
     .btn-group-vertical > .btn:focus,
+    .btn-group-vertical > .liveblog-publish-btn:focus,
+    .btn-group-vertical > .liveblog-save-btn:focus,
     .comment-form .btn-group-vertical > .submit:focus,
     .btn-group-vertical > .btn:active,
+    .btn-group-vertical > .liveblog-publish-btn:active,
+    .btn-group-vertical > .liveblog-save-btn:active,
     .comment-form .btn-group-vertical > .submit:active,
     .btn-group-vertical > .btn.active,
+    .btn-group-vertical > .active.liveblog-publish-btn,
+    .btn-group-vertical > .active.liveblog-save-btn,
     .comment-form .btn-group-vertical > .active.submit {
       z-index: 1; }
-  .btn-group .btn + .btn, .btn-group .comment-form .submit + .btn, .comment-form .btn-group .submit + .btn, .btn-group .comment-form .btn + .submit, .comment-form .btn-group .btn + .submit, .btn-group .comment-form .submit + .submit, .comment-form .btn-group .submit + .submit,
+  .btn-group .btn + .btn, .btn-group .liveblog-publish-btn + .btn, .btn-group .liveblog-save-btn + .btn, .btn-group .comment-form .submit + .btn, .comment-form .btn-group .submit + .btn, .btn-group .btn + .liveblog-publish-btn, .btn-group .liveblog-publish-btn + .liveblog-publish-btn, .btn-group .liveblog-save-btn + .liveblog-publish-btn, .btn-group .comment-form .submit + .liveblog-publish-btn, .comment-form .btn-group .submit + .liveblog-publish-btn,
+  .btn-group .btn + .liveblog-save-btn,
+  .btn-group .liveblog-publish-btn + .liveblog-save-btn,
+  .btn-group .liveblog-save-btn + .liveblog-save-btn,
+  .btn-group .comment-form .submit + .liveblog-save-btn, .comment-form .btn-group .submit + .liveblog-save-btn, .btn-group .comment-form .btn + .submit, .comment-form .btn-group .btn + .submit, .btn-group .comment-form .liveblog-publish-btn + .submit, .comment-form .btn-group .liveblog-publish-btn + .submit, .btn-group .comment-form .liveblog-save-btn + .submit, .comment-form .btn-group .liveblog-save-btn + .submit, .btn-group .comment-form .submit + .submit, .comment-form .btn-group .submit + .submit,
   .btn-group .btn + .btn-group,
+  .btn-group .liveblog-publish-btn + .btn-group,
+  .btn-group .liveblog-save-btn + .btn-group,
   .btn-group .comment-form .submit + .btn-group,
   .comment-form .btn-group .submit + .btn-group,
   .btn-group .btn-group + .btn,
+  .btn-group .btn-group + .liveblog-publish-btn,
+  .btn-group .btn-group + .liveblog-save-btn,
   .btn-group .comment-form .btn-group + .submit,
   .comment-form .btn-group .btn-group + .submit,
   .btn-group .btn-group + .btn-group,
   .btn-group-vertical .btn + .btn,
+  .btn-group-vertical .liveblog-publish-btn + .btn,
+  .btn-group-vertical .liveblog-save-btn + .btn,
   .btn-group-vertical .comment-form .submit + .btn,
   .comment-form .btn-group-vertical .submit + .btn,
+  .btn-group-vertical .btn + .liveblog-publish-btn,
+  .btn-group-vertical .liveblog-publish-btn + .liveblog-publish-btn,
+  .btn-group-vertical .liveblog-save-btn + .liveblog-publish-btn,
+  .btn-group-vertical .comment-form .submit + .liveblog-publish-btn,
+  .comment-form .btn-group-vertical .submit + .liveblog-publish-btn,
+  .btn-group-vertical .btn + .liveblog-save-btn,
+  .btn-group-vertical .liveblog-publish-btn + .liveblog-save-btn,
+  .btn-group-vertical .liveblog-save-btn + .liveblog-save-btn,
+  .btn-group-vertical .comment-form .submit + .liveblog-save-btn,
+  .comment-form .btn-group-vertical .submit + .liveblog-save-btn,
   .btn-group-vertical .comment-form .btn + .submit,
   .comment-form .btn-group-vertical .btn + .submit,
+  .btn-group-vertical .comment-form .liveblog-publish-btn + .submit,
+  .comment-form .btn-group-vertical .liveblog-publish-btn + .submit,
+  .btn-group-vertical .comment-form .liveblog-save-btn + .submit,
+  .comment-form .btn-group-vertical .liveblog-save-btn + .submit,
   .btn-group-vertical .comment-form .submit + .submit,
   .comment-form .btn-group-vertical .submit + .submit,
   .btn-group-vertical .btn + .btn-group,
+  .btn-group-vertical .liveblog-publish-btn + .btn-group,
+  .btn-group-vertical .liveblog-save-btn + .btn-group,
   .btn-group-vertical .comment-form .submit + .btn-group,
   .comment-form .btn-group-vertical .submit + .btn-group,
   .btn-group-vertical .btn-group + .btn,
+  .btn-group-vertical .btn-group + .liveblog-publish-btn,
+  .btn-group-vertical .btn-group + .liveblog-save-btn,
   .btn-group-vertical .comment-form .btn-group + .submit,
   .comment-form .btn-group-vertical .btn-group + .submit,
   .btn-group-vertical .btn-group + .btn-group {
@@ -5901,17 +5986,24 @@ input[type="button"].btn-block {
   .btn-toolbar .input-group {
     width: auto; }
 
-.btn-group > .btn:first-child, .comment-form .btn-group > .submit:first-child {
+.btn-group > .btn:first-child, .btn-group > .liveblog-publish-btn:first-child,
+.btn-group > .liveblog-save-btn:first-child, .comment-form .btn-group > .submit:first-child {
   margin-left: 0; }
 
-.btn-group > .btn:not(:last-child):not(.dropdown-toggle), .comment-form .btn-group > .submit:not(:last-child):not(.dropdown-toggle),
+.btn-group > .btn:not(:last-child):not(.dropdown-toggle), .btn-group > .liveblog-publish-btn:not(:last-child):not(.dropdown-toggle),
+.btn-group > .liveblog-save-btn:not(:last-child):not(.dropdown-toggle), .comment-form .btn-group > .submit:not(:last-child):not(.dropdown-toggle),
 .btn-group > .btn-group:not(:last-child) > .btn,
+.btn-group > .btn-group:not(:last-child) > .liveblog-publish-btn,
+.btn-group > .btn-group:not(:last-child) > .liveblog-save-btn,
 .comment-form .btn-group > .btn-group:not(:last-child) > .submit {
   border-top-right-radius: 0;
   border-bottom-right-radius: 0; }
 
-.btn-group > .btn:not(:first-child), .comment-form .btn-group > .submit:not(:first-child),
+.btn-group > .btn:not(:first-child), .btn-group > .liveblog-publish-btn:not(:first-child),
+.btn-group > .liveblog-save-btn:not(:first-child), .comment-form .btn-group > .submit:not(:first-child),
 .btn-group > .btn-group:not(:first-child) > .btn,
+.btn-group > .btn-group:not(:first-child) > .liveblog-publish-btn,
+.btn-group > .btn-group:not(:first-child) > .liveblog-save-btn,
 .comment-form .btn-group > .btn-group:not(:first-child) > .submit {
   border-top-left-radius: 0;
   border-bottom-left-radius: 0; }
@@ -5926,11 +6018,11 @@ input[type="button"].btn-block {
   .dropleft .dropdown-toggle-split::before {
     margin-right: 0; }
 
-.btn-sm + .dropdown-toggle-split, .btn-group-sm > .btn + .dropdown-toggle-split, .comment-form .btn-group-sm > .submit + .dropdown-toggle-split {
+.btn-sm + .dropdown-toggle-split, .btn-group-sm > .btn + .dropdown-toggle-split, .btn-group-sm > .liveblog-publish-btn + .dropdown-toggle-split, .btn-group-sm > .liveblog-save-btn + .dropdown-toggle-split, .comment-form .btn-group-sm > .submit + .dropdown-toggle-split {
   padding-right: 0.375rem;
   padding-left: 0.375rem; }
 
-.btn-lg + .dropdown-toggle-split, .btn-group-lg > .btn + .dropdown-toggle-split, .comment-form .btn-group-lg > .submit + .dropdown-toggle-split {
+.btn-lg + .dropdown-toggle-split, .btn-group-lg > .btn + .dropdown-toggle-split, .btn-group-lg > .liveblog-publish-btn + .dropdown-toggle-split, .btn-group-lg > .liveblog-save-btn + .dropdown-toggle-split, .comment-form .btn-group-lg > .submit + .dropdown-toggle-split {
   padding-right: 0.75rem;
   padding-left: 0.75rem; }
 
@@ -5945,38 +6037,62 @@ input[type="button"].btn-block {
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   justify-content: center; }
-  .btn-group-vertical .btn, .btn-group-vertical .comment-form .submit, .comment-form .btn-group-vertical .submit,
+  .btn-group-vertical .btn, .btn-group-vertical .liveblog-publish-btn,
+  .btn-group-vertical .liveblog-save-btn, .btn-group-vertical .comment-form .submit, .comment-form .btn-group-vertical .submit,
   .btn-group-vertical .btn-group {
     width: 100%; }
-  .btn-group-vertical > .btn + .btn, .comment-form .btn-group-vertical > .submit + .btn, .comment-form .btn-group-vertical > .btn + .submit, .comment-form .btn-group-vertical > .submit + .submit,
+  .btn-group-vertical > .btn + .btn, .btn-group-vertical > .liveblog-publish-btn + .btn, .btn-group-vertical > .liveblog-save-btn + .btn, .comment-form .btn-group-vertical > .submit + .btn, .btn-group-vertical > .btn + .liveblog-publish-btn, .btn-group-vertical > .liveblog-publish-btn + .liveblog-publish-btn, .btn-group-vertical > .liveblog-save-btn + .liveblog-publish-btn, .comment-form .btn-group-vertical > .submit + .liveblog-publish-btn,
+  .btn-group-vertical > .btn + .liveblog-save-btn,
+  .btn-group-vertical > .liveblog-publish-btn + .liveblog-save-btn,
+  .btn-group-vertical > .liveblog-save-btn + .liveblog-save-btn,
+  .comment-form .btn-group-vertical > .submit + .liveblog-save-btn, .comment-form .btn-group-vertical > .btn + .submit, .comment-form .btn-group-vertical > .liveblog-publish-btn + .submit, .comment-form .btn-group-vertical > .liveblog-save-btn + .submit, .comment-form .btn-group-vertical > .submit + .submit,
   .btn-group-vertical > .btn + .btn-group,
+  .btn-group-vertical > .liveblog-publish-btn + .btn-group,
+  .btn-group-vertical > .liveblog-save-btn + .btn-group,
   .comment-form .btn-group-vertical > .submit + .btn-group,
   .btn-group-vertical > .btn-group + .btn,
+  .btn-group-vertical > .btn-group + .liveblog-publish-btn,
+  .btn-group-vertical > .btn-group + .liveblog-save-btn,
   .comment-form .btn-group-vertical > .btn-group + .submit,
   .btn-group-vertical > .btn-group + .btn-group {
     margin-top: -1px;
     margin-left: 0; }
-  .btn-group-vertical > .btn:not(:last-child):not(.dropdown-toggle), .comment-form .btn-group-vertical > .submit:not(:last-child):not(.dropdown-toggle),
+  .btn-group-vertical > .btn:not(:last-child):not(.dropdown-toggle), .btn-group-vertical > .liveblog-publish-btn:not(:last-child):not(.dropdown-toggle),
+  .btn-group-vertical > .liveblog-save-btn:not(:last-child):not(.dropdown-toggle), .comment-form .btn-group-vertical > .submit:not(:last-child):not(.dropdown-toggle),
   .btn-group-vertical > .btn-group:not(:last-child) > .btn,
+  .btn-group-vertical > .btn-group:not(:last-child) > .liveblog-publish-btn,
+  .btn-group-vertical > .btn-group:not(:last-child) > .liveblog-save-btn,
   .comment-form .btn-group-vertical > .btn-group:not(:last-child) > .submit {
     border-bottom-right-radius: 0;
     border-bottom-left-radius: 0; }
-  .btn-group-vertical > .btn:not(:first-child), .comment-form .btn-group-vertical > .submit:not(:first-child),
+  .btn-group-vertical > .btn:not(:first-child), .btn-group-vertical > .liveblog-publish-btn:not(:first-child),
+  .btn-group-vertical > .liveblog-save-btn:not(:first-child), .comment-form .btn-group-vertical > .submit:not(:first-child),
   .btn-group-vertical > .btn-group:not(:first-child) > .btn,
+  .btn-group-vertical > .btn-group:not(:first-child) > .liveblog-publish-btn,
+  .btn-group-vertical > .btn-group:not(:first-child) > .liveblog-save-btn,
   .comment-form .btn-group-vertical > .btn-group:not(:first-child) > .submit {
     border-top-left-radius: 0;
     border-top-right-radius: 0; }
 
-.btn-group-toggle > .btn, .comment-form .btn-group-toggle > .submit,
+.btn-group-toggle > .btn, .btn-group-toggle > .liveblog-publish-btn,
+.btn-group-toggle > .liveblog-save-btn, .comment-form .btn-group-toggle > .submit,
 .btn-group-toggle > .btn-group > .btn,
+.btn-group-toggle > .btn-group > .liveblog-publish-btn,
+.btn-group-toggle > .btn-group > .liveblog-save-btn,
 .comment-form .btn-group-toggle > .btn-group > .submit {
   margin-bottom: 0; }
-  .btn-group-toggle > .btn input[type="radio"], .comment-form .btn-group-toggle > .submit input[type="radio"],
+  .btn-group-toggle > .btn input[type="radio"], .btn-group-toggle > .liveblog-publish-btn input[type="radio"], .btn-group-toggle > .liveblog-save-btn input[type="radio"], .comment-form .btn-group-toggle > .submit input[type="radio"],
   .btn-group-toggle > .btn input[type="checkbox"],
+  .btn-group-toggle > .liveblog-publish-btn input[type="checkbox"],
+  .btn-group-toggle > .liveblog-save-btn input[type="checkbox"],
   .comment-form .btn-group-toggle > .submit input[type="checkbox"],
   .btn-group-toggle > .btn-group > .btn input[type="radio"],
+  .btn-group-toggle > .btn-group > .liveblog-publish-btn input[type="radio"],
+  .btn-group-toggle > .btn-group > .liveblog-save-btn input[type="radio"],
   .comment-form .btn-group-toggle > .btn-group > .submit input[type="radio"],
   .btn-group-toggle > .btn-group > .btn input[type="checkbox"],
+  .btn-group-toggle > .btn-group > .liveblog-publish-btn input[type="checkbox"],
+  .btn-group-toggle > .btn-group > .liveblog-save-btn input[type="checkbox"],
   .comment-form .btn-group-toggle > .btn-group > .submit input[type="checkbox"] {
     position: absolute;
     clip: rect(0, 0, 0, 0);
@@ -6048,32 +6164,63 @@ input[type="button"].btn-block {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex; }
-  .input-group-prepend .btn, .input-group-prepend .comment-form .submit, .comment-form .input-group-prepend .submit,
+  .input-group-prepend .btn, .input-group-prepend .liveblog-publish-btn,
+  .input-group-prepend .liveblog-save-btn, .input-group-prepend .comment-form .submit, .comment-form .input-group-prepend .submit,
   .input-group-append .btn,
+  .input-group-append .liveblog-publish-btn,
+  .input-group-append .liveblog-save-btn,
   .input-group-append .comment-form .submit,
   .comment-form .input-group-append .submit {
     position: relative;
     z-index: 2; }
-  .input-group-prepend .btn + .btn, .input-group-prepend .comment-form .submit + .btn, .comment-form .input-group-prepend .submit + .btn, .input-group-prepend .comment-form .btn + .submit, .comment-form .input-group-prepend .btn + .submit, .input-group-prepend .comment-form .submit + .submit, .comment-form .input-group-prepend .submit + .submit,
+  .input-group-prepend .btn + .btn, .input-group-prepend .liveblog-publish-btn + .btn, .input-group-prepend .liveblog-save-btn + .btn, .input-group-prepend .comment-form .submit + .btn, .comment-form .input-group-prepend .submit + .btn, .input-group-prepend .btn + .liveblog-publish-btn, .input-group-prepend .liveblog-publish-btn + .liveblog-publish-btn, .input-group-prepend .liveblog-save-btn + .liveblog-publish-btn, .input-group-prepend .comment-form .submit + .liveblog-publish-btn, .comment-form .input-group-prepend .submit + .liveblog-publish-btn,
+  .input-group-prepend .btn + .liveblog-save-btn,
+  .input-group-prepend .liveblog-publish-btn + .liveblog-save-btn,
+  .input-group-prepend .liveblog-save-btn + .liveblog-save-btn,
+  .input-group-prepend .comment-form .submit + .liveblog-save-btn, .comment-form .input-group-prepend .submit + .liveblog-save-btn, .input-group-prepend .comment-form .btn + .submit, .comment-form .input-group-prepend .btn + .submit, .input-group-prepend .comment-form .liveblog-publish-btn + .submit, .comment-form .input-group-prepend .liveblog-publish-btn + .submit, .input-group-prepend .comment-form .liveblog-save-btn + .submit, .comment-form .input-group-prepend .liveblog-save-btn + .submit, .input-group-prepend .comment-form .submit + .submit, .comment-form .input-group-prepend .submit + .submit,
   .input-group-prepend .btn + .input-group-text,
+  .input-group-prepend .liveblog-publish-btn + .input-group-text,
+  .input-group-prepend .liveblog-save-btn + .input-group-text,
   .input-group-prepend .comment-form .submit + .input-group-text,
   .comment-form .input-group-prepend .submit + .input-group-text,
   .input-group-prepend .input-group-text + .input-group-text,
   .input-group-prepend .input-group-text + .btn,
+  .input-group-prepend .input-group-text + .liveblog-publish-btn,
+  .input-group-prepend .input-group-text + .liveblog-save-btn,
   .input-group-prepend .comment-form .input-group-text + .submit,
   .comment-form .input-group-prepend .input-group-text + .submit,
   .input-group-append .btn + .btn,
+  .input-group-append .liveblog-publish-btn + .btn,
+  .input-group-append .liveblog-save-btn + .btn,
   .input-group-append .comment-form .submit + .btn,
   .comment-form .input-group-append .submit + .btn,
+  .input-group-append .btn + .liveblog-publish-btn,
+  .input-group-append .liveblog-publish-btn + .liveblog-publish-btn,
+  .input-group-append .liveblog-save-btn + .liveblog-publish-btn,
+  .input-group-append .comment-form .submit + .liveblog-publish-btn,
+  .comment-form .input-group-append .submit + .liveblog-publish-btn,
+  .input-group-append .btn + .liveblog-save-btn,
+  .input-group-append .liveblog-publish-btn + .liveblog-save-btn,
+  .input-group-append .liveblog-save-btn + .liveblog-save-btn,
+  .input-group-append .comment-form .submit + .liveblog-save-btn,
+  .comment-form .input-group-append .submit + .liveblog-save-btn,
   .input-group-append .comment-form .btn + .submit,
   .comment-form .input-group-append .btn + .submit,
+  .input-group-append .comment-form .liveblog-publish-btn + .submit,
+  .comment-form .input-group-append .liveblog-publish-btn + .submit,
+  .input-group-append .comment-form .liveblog-save-btn + .submit,
+  .comment-form .input-group-append .liveblog-save-btn + .submit,
   .input-group-append .comment-form .submit + .submit,
   .comment-form .input-group-append .submit + .submit,
   .input-group-append .btn + .input-group-text,
+  .input-group-append .liveblog-publish-btn + .input-group-text,
+  .input-group-append .liveblog-save-btn + .input-group-text,
   .input-group-append .comment-form .submit + .input-group-text,
   .comment-form .input-group-append .submit + .input-group-text,
   .input-group-append .input-group-text + .input-group-text,
   .input-group-append .input-group-text + .btn,
+  .input-group-append .input-group-text + .liveblog-publish-btn,
+  .input-group-append .input-group-text + .liveblog-save-btn,
   .input-group-append .comment-form .input-group-text + .submit,
   .comment-form .input-group-append .input-group-text + .submit {
     margin-left: -1px; }
@@ -6106,23 +6253,33 @@ input[type="button"].btn-block {
   .input-group-text input[type="checkbox"] {
     margin-top: 0; }
 
-.input-group > .input-group-prepend > .btn, .comment-form .input-group > .input-group-prepend > .submit,
+.input-group > .input-group-prepend > .btn, .input-group > .input-group-prepend > .liveblog-publish-btn,
+.input-group > .input-group-prepend > .liveblog-save-btn, .comment-form .input-group > .input-group-prepend > .submit,
 .input-group > .input-group-prepend > .input-group-text,
 .input-group > .input-group-append:not(:last-child) > .btn,
+.input-group > .input-group-append:not(:last-child) > .liveblog-publish-btn,
+.input-group > .input-group-append:not(:last-child) > .liveblog-save-btn,
 .comment-form .input-group > .input-group-append:not(:last-child) > .submit,
 .input-group > .input-group-append:not(:last-child) > .input-group-text,
 .input-group > .input-group-append:last-child > .btn:not(:last-child):not(.dropdown-toggle),
+.input-group > .input-group-append:last-child > .liveblog-publish-btn:not(:last-child):not(.dropdown-toggle),
+.input-group > .input-group-append:last-child > .liveblog-save-btn:not(:last-child):not(.dropdown-toggle),
 .comment-form .input-group > .input-group-append:last-child > .submit:not(:last-child):not(.dropdown-toggle),
 .input-group > .input-group-append:last-child > .input-group-text:not(:last-child) {
   border-top-right-radius: 0;
   border-bottom-right-radius: 0; }
 
-.input-group > .input-group-append > .btn, .comment-form .input-group > .input-group-append > .submit,
+.input-group > .input-group-append > .btn, .input-group > .input-group-append > .liveblog-publish-btn,
+.input-group > .input-group-append > .liveblog-save-btn, .comment-form .input-group > .input-group-append > .submit,
 .input-group > .input-group-append > .input-group-text,
 .input-group > .input-group-prepend:not(:first-child) > .btn,
+.input-group > .input-group-prepend:not(:first-child) > .liveblog-publish-btn,
+.input-group > .input-group-prepend:not(:first-child) > .liveblog-save-btn,
 .comment-form .input-group > .input-group-prepend:not(:first-child) > .submit,
 .input-group > .input-group-prepend:not(:first-child) > .input-group-text,
 .input-group > .input-group-prepend:first-child > .btn:not(:first-child),
+.input-group > .input-group-prepend:first-child > .liveblog-publish-btn:not(:first-child),
+.input-group > .input-group-prepend:first-child > .liveblog-save-btn:not(:first-child),
 .comment-form .input-group > .input-group-prepend:first-child > .submit:not(:first-child),
 .input-group > .input-group-prepend:first-child > .input-group-text:not(:first-child) {
   border-top-left-radius: 0;
@@ -7195,7 +7352,7 @@ input[type="button"].btn-block {
   .badge:empty {
     display: none; }
 
-.btn .badge, .comment-form .submit .badge {
+.btn .badge, .liveblog-publish-btn .badge, .liveblog-save-btn .badge, .comment-form .submit .badge {
   position: relative;
   top: -1px; }
 
@@ -10482,7 +10639,8 @@ a.text-dark:hover, a.text-dark:focus {
     text-shadow: none !important;
     -webkit-box-shadow: none !important;
     box-shadow: none !important; }
-  a:not(.btn) {
+  a:not(.btn):not(.liveblog-publish-btn):not(
+  .liveblog-save-btn) {
     text-decoration: underline; }
   abbr[title]::after {
     content: " (" attr(title) ")"; }
@@ -10749,7 +10907,15 @@ h1, h2, h3, h4, h5, h6 {
       font-weight: normal;
       letter-spacing: 1px;
       stroke-width: .25;
-      text-transform: capitalize; }
+      text-transform: capitalize;
+      position: relative; }
+      .site-header .site-header-inner .text-sm::after {
+        content: '';
+        display: block;
+        height: 1px;
+        width: 100%;
+        position: absolute;
+        background-color: #eaeaea; }
 
 .square {
   width: 1px;
@@ -10822,26 +10988,14 @@ h1, h2, h3, h4, h5, h6 {
       border-bottom-color: #dedede; }
 
 .entry .entry-header .h3 {
-  font: 13px/27px "europa", "effra", -apple-system, system-ui, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif;
+  font: 13px/25px "europa", "effra", -apple-system, system-ui, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif;
   letter-spacing: 1.5px;
-  text-transform: uppercase; }
-  .entry .entry-header .h3 a {
-    color: #00403c;
-    position: relative; }
-    .entry .entry-header .h3 a span {
-      position: relative;
-      z-index: 10; }
-    .entry .entry-header .h3 a:before {
-      content: ' ';
-      display: block;
-      background-color: #00CCBD;
-      height: 1px;
-      width: 100%;
-      position: absolute;
-      z-index: 5;
-      bottom: -5px; }
-    .entry .entry-header .h3 a:hover:before {
-      background-color: #00403c; }
+  text-transform: uppercase;
+  position: relative; }
+  .entry .entry-header .h3 span {
+    border-bottom: 1px solid #00CCBD; }
+  .entry .entry-header .h3:hover span {
+    background-color: #eaeaea; }
 
 .entry .entry-header .linked-list-permalink {
   font: 19px/19px "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -10911,11 +11065,16 @@ h1, h2, h3, h4, h5, h6 {
   margin: 40px 0 80px; }
 
 .entry .edit-link {
+  display: none;
   font-size: 75%;
   text-transform: uppercase;
   letter-spacing: 1px;
   background-color: #dedede;
-  padding: 4px 8px; }
+  padding: 4px 8px;
+  float: right; }
+
+.entry:hover .edit-link {
+  display: inline-block; }
 
 .fs-1, .fs-1 > p {
   font-size: 1rem !important; }
@@ -11021,6 +11180,11 @@ h1, h2, h3, h4, h5, h6 {
       line-height: 1.75;
       font-weight: 300;
       margin-bottom: 2rem; } }
+
+.liveblog-editor-container {
+  background-color: transparent;
+  padding-left: 0;
+  padding-right: 0; }
 
 .page .page-inner .entry-body p {
   font-size: 1rem;

@@ -19,10 +19,10 @@
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class( $classes ); ?>>
-	<header class="entry-header">
-		<?php
-		the_title( '<h3 class="entry-title h3"><a href="' . esc_url( $url ) . '" rel="bookmark">', '</a><span class="linked-list-permalink"><a href="' . esc_url($permalink) . '" rel="bookmark" class="glyph">&#8734;</a></span></h3>' );
-		if ( 'post' === get_post_type() ) :
+	<header class="entry-header mb-2">
+		<?php the_title( '<h3 class="entry-title h3 d-inline"><span><a href="' . esc_url( $url ) . '" rel="bookmark">', '</a></span></h3>' );?>
+    <span class="linked-list-permalink"><a href="<?php echo $permalink; ?>" rel="bookmark" class="glyph">&#8734;</a></span>
+		<?php if ( 'post' === get_post_type() ) :
 			?>
 			<div class="entry-meta sr-only">
 				<?php _exiled_posted_on(); _exiled_posted_by(); ?>

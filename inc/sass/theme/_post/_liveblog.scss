@@ -1,0 +1,11 @@
+.liveblog-editor-container {
+  background-color: transparent;
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.liveblog-publish-btn,
+.liveblog-save-btn {
+  @extend .btn;
+  @extend .btn-primary;
+}

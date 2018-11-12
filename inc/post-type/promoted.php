@@ -43,7 +43,7 @@ function register_promoted_post() {
 		'show_ui'               => true,
 		'show_in_menu'          => true,
 		'menu_position'         => 5,
-    'menu_icon'             => 'dashicons-star-filled',
+		'menu_icon'             => 'dashicons-star-filled',
 		'show_in_admin_bar'     => true,
 		'show_in_nav_menus'     => true,
 		'can_export'            => true,
@@ -58,3 +58,51 @@ function register_promoted_post() {
 
 }
 add_action( 'init', 'register_promoted_post', 0 );
+
+/* Fire our meta box setup function on the post editor screen. */
+add_action( 'load-post.php', 'promoted_meta_boxes_setup' );
+add_action( 'load-post-new.php', 'promoted_meta_boxes_setup' );
+
+/* Meta box setup function. */
+function promoted_meta_boxes_setup() {
+	/* Add meta boxes on the 'add_meta_boxes' hook. */
+	add_action( 'add_meta_boxes', 'promoted_meta_boxes' );
+	/* Save post meta on the 'save_post' hook. */
+	add_action( 'save_post', 'save_promoted_meta', 10, 2 );
+}
+
+function promoted_meta_boxes(){
+	add_meta_box( 'promoted_meta_box', 'Meta', 'render_post_meta_box', '_exiled_promoted', 'side', 'high');
+}
+
+function render_promoted_meta_box($object, $box){
+	wp_nonce_field( basename( __FILE__ ), 'promoted_meta_nonce' ); ?>
+	<p>
+		<label for="source-name">Source Name</label>
+		<input type="text" name="source-name" id="source-name" value="<?php echo get_post_meta($object->ID, 'source-name', true); ?>"/>
+	</p>
+	<p>
+		<label for="source-url">Source URL</label>
+		<input type="text" name="source-url" id="source-url" value="<?php echo get_post_meta($object->ID, 'source-url', true); ?>"/>
+	</p>
+	<?php
+}
+
+/* Save the meta box's post metadata. */
+function save_promoted_meta( $post_id, $post ) {
+	/* Verify the nonce before proceeding. */
+	if ( !isset( $_POST['promoted_meta_nonce'] ) || !wp_verify_nonce( $_POST['promoted_meta_nonce'], basename( __FILE__ ) ) )
+	return $post_id;
+
+	/* Get the post type object. */
+	$post_type = get_post_type_object( $post->post_type );
+
+	/* Check if the current user has permission to edit the post. */
+	if ( !current_user_can( $post_type->cap->edit_post, $post_id ) )
+	return $post_id;
+
+	$source_meta = get_post_val('source-name');
+	update_post_meta($post_id, 'source-name', $source_meta);
+	$url_meta = get_post_val('source-url');
+	update_post_meta($post_id, 'source-url', $url_meta);
+}
