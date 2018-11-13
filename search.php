@@ -15,7 +15,7 @@ get_header();
 			<?php include get_template_directory() . '/template-parts/_partial_sticky.php'; ?>
 
 		<?php if ( have_posts() ) : ?>
-			<header class="page-header">
+			<header class="page-header layout-single-column mb-3">
 				<h1 class="page-title h4">
 					<?php
 					/* translators: %s: search query. */

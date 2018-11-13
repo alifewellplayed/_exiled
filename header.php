@@ -28,6 +28,7 @@
           'menu_class' => 'primary list-unstyled list-menu',
         ) ); ?>
       </nav>
+      <?php get_search_form(); ?>
       <div class="pulse-header d-block d-md-none">
         <?php include get_template_directory() . '/template-parts/_partial_pulsemarker.php'; ?>
       </div>

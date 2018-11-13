@@ -74,7 +74,7 @@
       position: relative;
       padding-top: 5px;
       color: $secondary;
-      font-size: 90%;
+      font-size: 75%;
       text-transform: uppercase;
       a {color: $secondary;}
       a:hover {color: $primary; }
@@ -88,8 +88,9 @@
       }
     }
   }
-  &.post {
-    &:after {
+
+  &.post ~ .datetime {
+    &:before {
       content: "";
       clear: both;
       display: block;

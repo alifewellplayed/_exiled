@@ -10948,6 +10948,15 @@ h1, h2, h3, h4, h5, h6 {
       font-size: 16px;
       margin-bottom: 20px;
       color: #f2f2f2; }
+  .site-sidebar .search-form .search-field {
+    border-width: 0 0 1px 0;
+    border-bottom: 1px solid #dedede;
+    background-color: transparent;
+    margin-right: 15px;
+    width: 125px;
+    text-align: right; }
+  .site-sidebar .search-form .search-submit {
+    display: none; }
 
 @media only screen and (min-width: 768px) {
   .site-sidebar {
@@ -11126,7 +11135,7 @@ h1, h2, h3, h4, h5, h6 {
   position: relative;
   padding-top: 5px;
   color: #00403c;
-  font-size: 90%;
+  font-size: 75%;
   text-transform: uppercase; }
   .entry .entry-footer .cat-links a {
     color: #00403c; }
@@ -11140,7 +11149,7 @@ h1, h2, h3, h4, h5, h6 {
     background-color: #b7b7b7;
     margin-bottom: 5px; }
 
-.entry.post:after {
+.entry.post ~ .datetime:before {
   content: "";
   clear: both;
   display: block;
