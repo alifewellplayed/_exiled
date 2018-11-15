@@ -1,4 +1,4 @@
-.entry {
+.hentry {
   a {transition: all .3s, color .3s;}
   a:hover {}
   .entry-header {
@@ -50,16 +50,20 @@
       font-size: 1rem;
       font-weight: 100;
       letter-spacing: 1.5px;
-      //text-shadow: 1px 1px 1px #000;
       &.lead {font-family: $font-family-sans-serif;}
       img {max-width: 100%;}
+      & ~ h2,
+      & ~ h3 { margin-top: 3rem; }
     }
     a {
       color: $link-color;
       padding-bottom: 1px;
-      border-bottom: 1px solid $link-color;
-      //text-decoration: underline;
-      &:hover { color: $black; }
+      border-bottom: 1px solid darken($body-bg, 10%);
+      &:hover {
+        background-color: darken($body-bg, 5%);
+        border-bottom-color: $primary;
+        color: $primary;
+      }
     }
     blockquote {
       font-weight: 100;

@@ -1,0 +1,23 @@
+.search-form {
+  .search-field {
+    border-width: 0 0 1px 0;
+    border-bottom: 1px solid darken($body-bg, 10%);
+    background-color: transparent;
+    &:focus {
+      outline: none;
+      border-bottom: 1px solid darken($body-bg, 20%);
+    }
+  }
+  .search-submit {display: none;}
+}
+
+
+.site-sidebar {
+  .search-form {
+    .search-field {
+      margin-right: 15px;
+      width: 125px;
+      text-align: right;
+    }
+  }
+}

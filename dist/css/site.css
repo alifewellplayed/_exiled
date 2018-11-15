@@ -10948,15 +10948,6 @@ h1, h2, h3, h4, h5, h6 {
       font-size: 16px;
       margin-bottom: 20px;
       color: #f2f2f2; }
-  .site-sidebar .search-form .search-field {
-    border-width: 0 0 1px 0;
-    border-bottom: 1px solid #dedede;
-    background-color: transparent;
-    margin-right: 15px;
-    width: 125px;
-    text-align: right; }
-  .site-sidebar .search-form .search-submit {
-    display: none; }
 
 @media only screen and (min-width: 768px) {
   .site-sidebar {
@@ -10970,6 +10961,22 @@ h1, h2, h3, h4, h5, h6 {
       position: relative; }
     .site-sidebar .site-nav {
       display: block; } }
+
+.search-form .search-field {
+  border-width: 0 0 1px 0;
+  border-bottom: 1px solid #dedede;
+  background-color: transparent; }
+  .search-form .search-field:focus {
+    outline: none;
+    border-bottom: 1px solid #c4c4c4; }
+
+.search-form .search-submit {
+  display: none; }
+
+.site-sidebar .search-form .search-field {
+  margin-right: 15px;
+  width: 125px;
+  text-align: right; }
 
 .site-header {
   position: relative;
@@ -11042,7 +11049,8 @@ h1, h2, h3, h4, h5, h6 {
     text-transform: uppercase; }
     .exiled-media-list .media .media-body h5 a {
       color: #00403c;
-      position: relative; }
+      position: relative;
+      border-width: 0; }
       .exiled-media-list .media .media-body h5 a span {
         position: relative;
         z-index: 10; }
@@ -11067,81 +11075,86 @@ h1, h2, h3, h4, h5, h6 {
     letter-spacing: 1px;
     font-size: .85rem; }
 
-.entry a {
+.hentry a {
   -webkit-transition: all .3s, color .3s;
   transition: all .3s, color .3s; }
 
-.entry .entry-header .h2 {
+.hentry .entry-header .h2 {
   font-size: 2rem;
   font-family: "futura-pt", "effra", -apple-system, system-ui, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif;
   letter-spacing: 1px;
   font-weight: 100;
   margin-bottom: 1rem; }
-  .entry .entry-header .h2 a {
+  .hentry .entry-header .h2 a {
     color: #00403c;
     border-bottom: 1px solid transparent; }
-    .entry .entry-header .h2 a:hover {
+    .hentry .entry-header .h2 a:hover {
       color: #00CCBD;
       border-bottom-color: #dedede; }
 
-.entry .entry-header .h3 {
+.hentry .entry-header .h3 {
   font: 13px/25px "europa", "effra", -apple-system, system-ui, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif;
   letter-spacing: 1.5px;
   text-transform: uppercase;
   position: relative; }
-  .entry .entry-header .h3 span {
+  .hentry .entry-header .h3 span {
     border-bottom: 1px solid #00CCBD; }
-  .entry .entry-header .h3:hover span {
+  .hentry .entry-header .h3:hover span {
     background-color: #eaeaea; }
 
-.entry .entry-header .linked-list-permalink {
+.hentry .entry-header .linked-list-permalink {
   font: 19px/19px "Helvetica Neue", Helvetica, Arial, sans-serif;
   border-width: 0;
   padding: 0 4px; }
-  .entry .entry-header .linked-list-permalink a {
+  .hentry .entry-header .linked-list-permalink a {
     color: #00403c; }
-    .entry .entry-header .linked-list-permalink a::before {
+    .hentry .entry-header .linked-list-permalink a::before {
       display: none !important; }
-    .entry .entry-header .linked-list-permalink a:hover {
+    .hentry .entry-header .linked-list-permalink a:hover {
       color: #00CCBD; }
 
-.entry .entry-content {
+.hentry .entry-content {
   margin-bottom: 20px; }
-  .entry .entry-content h2, .entry .entry-content h3, .entry .entry-content h4, .entry .entry-content h5, .entry .entry-content h6 {
+  .hentry .entry-content h2, .hentry .entry-content h3, .hentry .entry-content h4, .hentry .entry-content h5, .hentry .entry-content h6 {
     font-weight: 100;
     color: #00CCBD; }
-  .entry .entry-content p {
+  .hentry .entry-content p {
     font-size: 1rem;
     font-weight: 100;
     letter-spacing: 1.5px; }
-    .entry .entry-content p.lead {
+    .hentry .entry-content p.lead {
       font-family: "europa", "effra", -apple-system, system-ui, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif; }
-    .entry .entry-content p img {
+    .hentry .entry-content p img {
       max-width: 100%; }
-  .entry .entry-content a {
+    .hentry .entry-content p ~ h2,
+    .hentry .entry-content p ~ h3 {
+      margin-top: 3rem; }
+  .hentry .entry-content a {
     color: #00403c;
     padding-bottom: 1px;
-    border-bottom: 1px solid #00403c; }
-    .entry .entry-content a:hover {
-      color: #000; }
-  .entry .entry-content blockquote {
+    border-bottom: 1px solid #dedede; }
+    .hentry .entry-content a:hover {
+      background-color: #eaeaea;
+      border-bottom-color: #00CCBD;
+      color: #00CCBD; }
+  .hentry .entry-content blockquote {
     font-weight: 100;
     font-size: 1.25rem;
     border-left: 1px solid #000;
     color: #000;
     padding-left: 10px; }
 
-.entry .entry-footer .cat-links {
+.hentry .entry-footer .cat-links {
   position: relative;
   padding-top: 5px;
   color: #00403c;
   font-size: 75%;
   text-transform: uppercase; }
-  .entry .entry-footer .cat-links a {
+  .hentry .entry-footer .cat-links a {
     color: #00403c; }
-  .entry .entry-footer .cat-links a:hover {
+  .hentry .entry-footer .cat-links a:hover {
     color: #00CCBD; }
-  .entry .entry-footer .cat-links:before {
+  .hentry .entry-footer .cat-links:before {
     content: ' ';
     display: block;
     width: 25px;
@@ -11149,7 +11162,7 @@ h1, h2, h3, h4, h5, h6 {
     background-color: #b7b7b7;
     margin-bottom: 5px; }
 
-.entry.post ~ .datetime:before {
+.hentry.post ~ .datetime:before {
   content: "";
   clear: both;
   display: block;
@@ -11163,7 +11176,7 @@ h1, h2, h3, h4, h5, h6 {
   background-size: 20px;
   margin: 40px 0 80px; }
 
-.entry .edit-link {
+.hentry .edit-link {
   display: none;
   font-size: 75%;
   text-transform: uppercase;
@@ -11172,7 +11185,7 @@ h1, h2, h3, h4, h5, h6 {
   padding: 4px 8px;
   float: right; }
 
-.entry:hover .edit-link {
+.hentry:hover .edit-link {
   display: inline-block; }
 
 .fs-1, .fs-1 > p {
