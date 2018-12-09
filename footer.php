@@ -16,7 +16,6 @@
  $site_website = get_option('site_author_website');
  $site_email =  get_option('social_email');
 
-
 ?>
 	</div><!-- #content -->
 </div><!-- #river -->
@@ -30,7 +29,9 @@
         ) ); ?>
       </nav>
       <small class="d-block"><?php echo $_exiled_title; ?>, Copyright &copy; <?php echo date("Y"); ?></small>
+      <?php if (!empty($site_author)) {?>
       <small class="d-block">By <a href="<?php echo $site_website; ?>"><?php echo $site_author; ?></a></small>
+      <?php } ?>
 		</div><!-- .site-info -->
 	</footer><!-- #colophon -->
 </div><!-- #page -->
