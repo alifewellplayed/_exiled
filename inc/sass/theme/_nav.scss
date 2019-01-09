@@ -1,0 +1,11 @@
+
+.posts-navigation {
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+@media only screen and (min-width: $mobile-collapse) {
+  .posts-navigation {
+    margin-left: $sidebar-width;
+  }
+}

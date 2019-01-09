@@ -80,7 +80,7 @@ if ( ! function_exists( '_exiled_setup' ) ) :
     /**
     * Add post type formats
     *
-    * @link https://codex.wordpress.org/Theme_Logo
+    * @link https://codex.wordpress.org/Post_Formats
     */
 
     add_theme_support( 'post-formats', array(
@@ -152,7 +152,8 @@ add_action( 'pre_get_posts', 'update_main_query' );
 require get_template_directory() . '/inc/util.php';
 
 // Custom post meta fields
-require get_template_directory() . '/inc/post-meta.php';
+require get_template_directory() . '/inc/post-type/post.php';
+require get_template_directory() . '/inc/post-type/page.php';
 
 // Register custom post types
 require get_template_directory() . '/inc/post-type/notes.php';

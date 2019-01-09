@@ -11,7 +11,11 @@
     'page',
     'mb-5',
 	);
-?>
+
+$title_status = get_post_meta(get_the_ID(), 'hide_title', true);
+if ($title_status == 'true') { ?>
+  <style type="text/css">.entry-header .entry-title { display: none !important; }</style>
+<?php } ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class( $classes ); ?>>
 	<header class="entry-header">

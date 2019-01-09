@@ -11371,6 +11371,14 @@ h1, h2, h3, h4, h5, h6 {
     .linklist.archived a:hover {
       border-bottom: 1px solid white; }
 
+.posts-navigation {
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem; }
+
+@media only screen and (min-width: 768px) {
+  .posts-navigation {
+    margin-left: 150px; } }
+
 .site-footer {
   position: relative;
   font-size: .75rem;

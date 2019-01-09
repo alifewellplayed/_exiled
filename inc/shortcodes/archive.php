@@ -15,33 +15,36 @@ function exiled_render_posts() {
     ) )
   );
   $query = new WP_Query( $args );
+  $previous_date  = '';
   if ( $query->have_posts() ) {
-    echo '<ul class="list-unstyled exiled-media-list">';
-
-    the_date('F Y', '<h2 class="h6 my-4 datetime">', '</h2>');
-
+    $return_string = '<ul class="list-unstyled exiled-media-list">';
+    //$return_string .= '<h2 class="h6 my-4 datetime">' . get_the_date('F Y') . '</h2>';
     while ( $query->have_posts() ) {
       $query->the_post();
       $title = get_the_title();
       $url = get_permalink();
       $absolute_url = get_permalink();
+      $datetime = get_the_date('F Y');
       $naturalTime = get_the_date();
       $humanTime = human_time_diff( get_the_time('U'), current_time('timestamp') ) . ' ago';
-      $excerpt = get_the_excerpt(); ?>
-      <li class="media">
+      $excerpt = get_the_excerpt();
+      if($datetime !== $previous_date) {
+        $return_string .= '<h2 class="h6 my-4 datetime">'.$datetime.'</h2>';
+      }
+      $return_string .= '<li class="media">
         <div class="media-body">
-          <time datetime="<?php echo $naturalTime; ?>" class="sr-only"><?php echo $naturalTime; ?></time>
+          <time datetime="'.$naturalTime.'" class="sr-only">'.$naturalTime.'</time>
         </datetime>
         <h5 class="mt-0 mb-1">
-          <a href="<?php echo $url; ?>"><span><?php echo $title; ?></span></a>
-          <small class="datetime pl-2"><?php echo $naturalTime; ?></small>
+          <a href="'.$url.'"><span>'.$title.'</span></a>
+          <small class="datetime pl-2">'.$naturalTime.'</small>
         </h5>
       </div>
-    </li>
-  <?php }
-  echo '</ul>';
+    </li>';
+    }
+    $return_string .= '</ul>';
+    wp_reset_query();
+    return $return_string;
+  }
 }
-wp_reset_postdata();
-}
-
 add_shortcode('render_posts', 'exiled_render_posts');
