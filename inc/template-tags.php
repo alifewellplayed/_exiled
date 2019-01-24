@@ -146,3 +146,17 @@ if ( ! function_exists( '_exiled_post_thumbnail' ) ) :
 		endif; // End is_singular().
 	}
 endif;
+
+if ( ! function_exists( 'get_permalink_absolute' ) ) :
+	//Returns the custom url field if it exists, else the post permalink.
+	function get_permalink_absolute($id) {
+		if (!empty($id)) { $id = get_the_ID();}
+		$url_source = get_post_meta($id, 'source-url', true);
+	  $permalink = get_the_permalink($id);
+		if (!empty($url_source)) {
+			return $url_source;
+		} else {
+			return $permalink;
+		}
+	}
+endif;

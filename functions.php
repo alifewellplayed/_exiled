@@ -159,6 +159,7 @@ require get_template_directory() . '/inc/post-type/page.php';
 require get_template_directory() . '/inc/post-type/notes.php';
 require get_template_directory() . '/inc/post-type/promoted.php';
 require get_template_directory() . '/inc/post-type/collection.php';
+require get_template_directory() . '/inc/post-type/review.php';
 
 // Register custom taxonomies
 require get_template_directory() . '/inc/taxonomy/timeline.php';
