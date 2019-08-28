@@ -6,6 +6,7 @@ function exiled_render_posts() {
   $args = array(
     'post_status' => 'publish',
     'numberposts' => -1,
+    'posts_per_page' => -1,
     'suppress_filters' => true,
     'tax_query' => array( array(
       'taxonomy' => 'post_format',
@@ -15,10 +16,10 @@ function exiled_render_posts() {
     ) )
   );
   $query = new WP_Query( $args );
-  $previous_date  = '';
   if ( $query->have_posts() ) {
     $return_string = '<ul class="list-unstyled exiled-media-list">';
     //$return_string .= '<h2 class="h6 my-4 datetime">' . get_the_date('F Y') . '</h2>';
+    $previous_date  = '';
     while ( $query->have_posts() ) {
       $query->the_post();
       $title = get_the_title();
@@ -31,10 +32,10 @@ function exiled_render_posts() {
       if($datetime !== $previous_date) {
         $return_string .= '<h2 class="h6 my-4 datetime">'.$datetime.'</h2>';
       }
+      $previous_date = strval($datetime);
       $return_string .= '<li class="media">
-        <div class="media-body">
-          <time datetime="'.$naturalTime.'" class="sr-only">'.$naturalTime.'</time>
-        </datetime>
+      <div class="media-body">
+        <time datetime="'.$naturalTime.'" class="sr-only">'.$naturalTime.'</time>
         <h5 class="mt-0 mb-1">
           <a href="'.$url.'"><span>'.$title.'</span></a>
           <small class="datetime pl-2">'.$naturalTime.'</small>
@@ -43,6 +44,7 @@ function exiled_render_posts() {
     </li>';
     }
     $return_string .= '</ul>';
+    
     wp_reset_query();
     return $return_string;
   }
