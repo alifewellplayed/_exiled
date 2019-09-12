@@ -29,6 +29,12 @@ function register_reviews() {
 		'items_list_navigation' => __( 'Items list navigation', '_exiled' ),
 		'filter_items_list'     => __( 'Filter items list', '_exiled' ),
 	);
+	$rewrite = array(
+		'slug'                  => 'reviews',
+		'with_front'            => true,
+		'pages'                 => true,
+		'feeds'                 => true,
+	);
 	$args = array(
 		'label'                 => __( 'Review', '_exiled' ),
 		'description'           => __( 'Reviews of various things', '_exiled' ),
@@ -47,6 +53,7 @@ function register_reviews() {
 		'has_archive'           => true,
 		'exclude_from_search'   => false,
 		'publicly_queryable'    => true,
+		'rewrite'               => $rewrite,
 		'capability_type'       => 'page',
 	);
 	register_post_type( '_exiled_review', $args );

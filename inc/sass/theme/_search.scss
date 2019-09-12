@@ -19,5 +19,12 @@
       width: 125px;
       text-align: right;
     }
+    ::placeholder {
+      text-transform: uppercase;
+      font-size: 15px;
+      letter-spacing: 1px;
+      color: #00403c;
+      opacity: .95;
+    }
   }
 }
