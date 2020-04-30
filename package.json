@@ -27,7 +27,7 @@
     "gulp-sourcemaps": ">=1.5.2",
     "gulp-uglify-es": "^1.0.4",
     "gulp-watch": "^5.0.0",
-    "jquery": "3.4.1",
+    "jquery": "3.5.0",
     "jquery.easing": "*",
     "jshint": ">=2.0",
     "jshint-stylish": ">=2.0.1",
